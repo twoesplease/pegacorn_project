@@ -4,6 +4,7 @@
 require "net/http"
 require "json"
 require "date"
+require "./.gitignore/pegacorn_secrets"
 
 # Adding 86_400 seconds starts the count at 8pm (in EST, not GMT) for the ONC crew
 today_at_8pm_in_seconds = DateTime.now.to_date.strftime('%s').to_i + 86_400
@@ -29,7 +30,7 @@ tomorrow_at_6am_iso = "this is a placeholder string"
 #uri.query = URI.encode_www_form(params)
 #
 #req = Net::HTTP::Get.new(uri)
-#	req.basic_auth 'tonee.young@mailchimp.com', '&!j0T9512k!&'
+#req.basic_auth 'ZendeskSecrets::ZENDESK_USERNAME', 'ZendeskSecrets::ZENDESK_PASSWORD'
 #	
 #	res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) {|http|
 #		http.request(req)
