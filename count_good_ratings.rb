@@ -1,12 +1,12 @@
 # Trigger once we reach 300 good ratings for the day #
 # Zendesk API Documentation on Satisfaction Ratings: 
  #https://developer.zendesk.com/rest_api/docs/core/satisfaction_ratings
-#class GetGoodRatings 
 
 	require "net/http"
 	require "json"
 	require "date"
-	require "./.gitignore/pegacorn_secrets"
+	# Have to hardcode this file path bc cron can't see the relative path
+	require "/Users/user/Desktop/Pegacorn_Project/.gitignore/pegacorn_secrets"
 		
 	# Today's date has to be converted to seconds bc the Zendesk API requires an integer 
 	# for the start_time filter
@@ -33,9 +33,9 @@
 		http.request(req)
 	}
 	
-	puts "The current time is: #{DateTime.now}"
+	puts "It's currently: #{DateTime.now}"
 	puts "Response code: #{res.code}"
-	puts "Response message: #{res.message}"
+	puts "Response message: #{res.message} \n"
 	
 	# We need hashed_body in order to output a hash to get the count.  
 	# Can use the prettified_body variable if we need to see the ratings in the call.  
@@ -45,10 +45,8 @@
 
 	puts hashed_body["count"]
 
-	if hashed_body["count"] >= 400
+	if hashed_body["count"] >= 300
 		puts "Light the pegacorn!"
 	else
 		puts "The time has not yet come. \n"
 	end
-
-#end
