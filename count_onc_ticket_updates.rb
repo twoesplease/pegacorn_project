@@ -1,5 +1,5 @@
-# Count ONC ticket updates #
-# Zendesk search API documentation: https://developer.zendesk.com/rest_api/docs/core/search #
+## Trigger once ONC hits 45 solves for the day ##
+	# Zendesk search API documentation: https://developer.zendesk.com/rest_api/docs/core/search 
 
 require "net/http"
 require "json"
@@ -7,23 +7,40 @@ require "date"
 # Have to hardcode this file path bc cron can't see the relative path
 require "/Users/user/Desktop/Pegacorn_Project/.gitignore/pegacorn_secrets"
 
-# first attempt:
-today_at_8pm_iso = DateTime.now.to_date.strftime('%FT%R-04:00')
-# puts today_at_8pm_iso
+# Get the year, month, date for today and then add the timestamp for 8pm
+def today_at_8pm_iso 
+	DateTime.parse(DateTime.now.strftime('%Y%m%d') + "T20:00:00-04:00")
+end
 
-#second attempt:
-#today_at_8pm_iso = DateTime.parse(today_at_8pm_in_seconds.to_s).iso8601
-#puts today_at_8pm_iso
-#tomorrow_at_6am_iso = "this is a placeholder string"
+def tomorrow_at_6am_iso
+	today = DateTime.now.strftime('%Y-%m-%d').split("-").to_a
+	# Add 1 to today's date to make it tomorrow!
+	add_one_for_tomorrow = (today[2].to_i) + 1
+	# Swap out today's date in the array to get tomorrow
+	tomorrow = today.map do |x| 
+		if x==today[2] 
+			add_one_for_tomorrow
+		else 
+			x
+		end
+	end
+	# Add the time of 6am to the end of the array
+	today.push("T06:00:00-04:00")
+	tmw_at_6am = today.join("-")
+	DateTime.parse(tmw_at_6am)
+end
 
 uri = URI("https://mailchimp.zendesk.com/api/v2/search.json")
 params = {
 	'sort_by' => 'created_at',
 	'sort_order' => 'asc',
 	'limit' => 1,
-	#This works, but interpolating a variable in does not
-	'query' => "solved>2017-07-14"
-}
+	#Using this query on 7/15/17 at 10:09 pm got me 1672 in the hashed_body["count"]
+	# but using the interpolated query "solved>#{today_at_8pm_iso} solved<#{tomorrow_at_6am_iso}" 
+		#got me 0 results.  Why?  Is it because it's a string?
+	'query' => "solved>2017-07-15T06:00:00-04:00 solved<2017-07-15T20:00:00-04:00"
+	}
+
 uri.query = URI.encode_www_form(params)
 
 req = Net::HTTP::Get.new(uri)
@@ -38,11 +55,13 @@ puts "Response code: #{res.code}"
 puts "Response message: #{res.message} \n"
 
 # We need hashed_body in order to output a hash to get the count.  
-	# Can use the prettified_body variable if we need to see the ratings in the call.  
-	# To view results, we'll need to change or remove the limit filter in params above.
-	hashed_body = JSON.parse(res.body)
-	
-	# If we need to look at the body:
-	# prettified_body = JSON.pretty_generate(hashed_body)
+hashed_body = JSON.parse(res.body)
 
-	puts hashed_body["count"]
+# If we need to look at the body (we'll need to change limit filter in params above):
+# prettified_body = JSON.pretty_generate(hashed_body)
+puts hashed_body["count"]
+if hashed_body["count"] >= 45
+	puts "Light the pegacorn!"
+else
+	puts "The time has not yet come. \n"
+end
