@@ -42,6 +42,7 @@ hashed_body = JSON.parse(res.body)
 # If we need to look at the body (we'll need to change limit filter in params above):
 # prettified_body = JSON.pretty_generate(hashed_body)
 puts hashed_body["count"]
+
 if hashed_body["count"] >= 300
 	puts "Light the pegacorn!"
 else
