@@ -25,21 +25,17 @@ def tomorrow_at_6am_iso
 		end
 	end
 	# Add the timestamp of 6am to the end of the array
-	today.push("T06:00:00-04:00")
-	tmw_at_6am = today.join("-")
-	DateTime.parse(tmw_at_6am).iso8601
+	tomorrow.push("T06:00:00-04:00")
+	tmw_at_6am = tomorrow.join("-")
+    DateTime.parse(tmw_at_6am).iso8601
 end
 
-uri = URI("https://mailchimp.zendesk.com/api/v2/search.json")
+ uri = URI("https://mailchimp.zendesk.com/api/v2/search.json")
 params = {
 	'sort_by' => 'created_at',
 	'sort_order' => 'asc',
 	'limit' => 1,
-	#Using this query on 7/15/17 at 10:09 pm got me 1672 in the hashed_body["count"]
-	# but using the interpolated query "solved>#{today_at_8pm_iso} solved<#{tomorrow_at_6am_iso}" 
-		#got me 0 results.  Why?  Is it because it's a string?
-	#'query' => "solved>2017-07-15T06:00:00-04:00 solved<2017-07-15T20:00:00-04:00"
-	'query' => "solved>#{today_at_8pm_iso} solved<#{tomorrow_at_6am_iso}"
+	'query' => "solved>=#{today_at_8pm_iso} solved<=#{tomorrow_at_6am_iso}"
 	}
 
 uri.query = URI.encode_www_form(params)
@@ -47,9 +43,9 @@ uri.query = URI.encode_www_form(params)
 req = Net::HTTP::Get.new(uri)
 req.basic_auth ZendeskSecrets::ZENDESK_USERNAME, ZendeskSecrets::ZENDESK_PASSWORD
 	
-	res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) {|http|
-		http.request(req)
-	}
+res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) do 
+	|http| http.request(req)
+end
 	
 puts "It's currently: #{DateTime.now}"
 puts "Response code: #{res.code}"

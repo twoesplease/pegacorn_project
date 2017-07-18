@@ -14,33 +14,31 @@
 # Other Websockets 101 article:
 # http://lucumr.pocoo.org/2012/9/24/websockets-101/
 
-require "websocket"
+# This one has a section on Consuming WebSocket Services
+# https://www.igvita.com/2009/12/22/ruby-websockets-tcp-for-the-browser/
 
-@handshake = WebSocket::Handshake::Client.new(url: 'wss://rtm.zopim.com/stream')
+require 'eventmachine'
+require 'em-http-request'
 
-# Create request
-@handshake.to_s 
-
-# Parse server response
-@handshake << <<EOF
-HTTP/1.1 101 Switching Protocols\r
-Upgrade: websocket\r
-Connection: Upgrade\r
-Sec-WebSocket-Accept: \r
-\r
-EOF
-
-# All data received?
-@handshake.finished?
-
-# No parsing errors?
-@handshake.valid?
-
-
-
-
-if waiting_time_avg <= 45
-	puts "Light the pegacorn!"
-else
-	puts "The time has not yet come. \n"
+EventMachine.run do
+  http = EventMachine::HttpRequest.new("wss://rtm.zopim.com/stream").get :timeout => 0
 end
+
+  http.errback { puts "oops" }
+  http.callback {
+    puts "WebSocket connected!"
+  }
+
+  http.stream { |msg|
+    puts "Recieved: #{msg}"
+    http.send "Pong: #{msg}"
+  }
+
+  ws.close(1000)
+
+
+# if waiting_time_avg <= 45
+# 	puts "Light the pegacorn!"
+# else
+# 	puts "The time has not yet come. \n"
+# end
