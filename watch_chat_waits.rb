@@ -14,33 +14,47 @@
 # Other Websockets 101 article:
 # http://lucumr.pocoo.org/2012/9/24/websockets-101/
 
-require "websocket"
+# This one has a section on Consuming WebSocket Services
+# https://www.igvita.com/2009/12/22/ruby-websockets-tcp-for-the-browser/
 
-@handshake = WebSocket::Handshake::Client.new(url: 'wss://rtm.zopim.com/stream')
+# EventMachine-HttpRequest documentation: 
+# https://github.com/igrigorik/em-http-request/wiki/Issuing-Requests
 
-# Create request
-@handshake.to_s 
+require 'eventmachine'
+require 'em-http-request'
+require "/Users/user/Desktop/Pegacorn_Project/.gitignore/pegacorn_secrets"
 
-# Parse server response
-@handshake << <<EOF
-HTTP/1.1 101 Switching Protocols\r
-Upgrade: websocket\r
-Connection: Upgrade\r
-Sec-WebSocket-Accept: \r
-\r
-EOF
+EventMachine.run {
+	http = EventMachine::HttpRequest.new(wss://rtm.zopim.com/stream).get
 
-# All data received?
-@handshake.finished?
+	options = {
+          :connect_timeout => 5,        # default connection setup timeout
+          :inactivity_timeout => 10,    # default connection inactivity (post-setup) timeout
 
-# No parsing errors?
-@handshake.valid?
+ 		request_options = {
+ 			:head => {
+ 				'authorization' => [ZendeskSecrets::ZOPIM_USERNAME, ZendeskSecrets::ZOPIM_PASSWORD] 
+ 			}
+ 		}
+
+ 	# Next, I need to find out how to Convert this to Ruby and send it as a message
+ 	# to the server:
+ 	#{
+    #	topic: "chats.waiting_time_avg",
+    #	action: "subscribe",
+    #	window: 30
+	#}
+
+	# I will then also need a method for parsing the response.
+
+ 	
+ 		EventMachine.stop
+ 	}
+  
 
 
-
-
-if waiting_time_avg <= 45
-	puts "Light the pegacorn!"
-else
-	puts "The time has not yet come. \n"
-end
+# if waiting_time_avg <= 45
+# 	puts "Light the pegacorn!"
+# else
+# 	puts "The time has not yet come. \n"
+# end
