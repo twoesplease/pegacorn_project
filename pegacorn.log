@@ -811,3 +811,157 @@ Response code: 200
 Response message: OK 
 254
 The time has not yet come. 
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/net/http.rb:878:in `initialize': getaddrinfo: nodename nor servname provided, or not known (SocketError)
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/net/http.rb:878:in `open'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/net/http.rb:878:in `block in connect'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/timeout.rb:52:in `timeout'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/net/http.rb:877:in `connect'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/net/http.rb:862:in `do_start'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/net/http.rb:851:in `start'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/net/http.rb:582:in `start'
+	from /Users/user/Desktop/Pegacorn_Project/count_good_ratings.rb:32:in `<main>'
+It's currently: 2017-07-18T09:30:01-04:00
+Response code: 200
+Response message: OK 
+69
+The time has not yet come. 
+It's currently: 2017-07-18T09:40:01-04:00
+Response code: 200
+Response message: OK 
+72
+The time has not yet come. 
+It's currently: 2017-07-18T09:50:00-04:00
+Response code: 200
+Response message: OK 
+73
+The time has not yet come. 
+It's currently: 2017-07-18T10:00:02-04:00
+Response code: 200
+Response message: OK 
+76
+The time has not yet come. 
+It's currently: 2017-07-18T10:10:01-04:00
+Response code: 200
+Response message: OK 
+84
+The time has not yet come. 
+It's currently: 2017-07-18T10:20:01-04:00
+Response code: 200
+Response message: OK 
+87
+The time has not yet come. 
+It's currently: 2017-07-18T10:30:01-04:00
+Response code: 200
+Response message: OK 
+93
+The time has not yet come. 
+It's currently: 2017-07-18T10:40:01-04:00
+Response code: 200
+Response message: OK 
+99
+The time has not yet come. 
+It's currently: 2017-07-18T10:50:00-04:00
+Response code: 200
+Response message: OK 
+101
+The time has not yet come. 
+It's currently: 2017-07-18T11:00:01-04:00
+Response code: 200
+Response message: OK 
+106
+The time has not yet come. 
+It's currently: 2017-07-18T11:10:01-04:00
+Response code: 200
+Response message: OK 
+119
+The time has not yet come. 
+It's currently: 2017-07-18T11:20:02-04:00
+Response code: 200
+Response message: OK 
+125
+The time has not yet come. 
+It's currently: 2017-07-18T15:10:01-04:00
+Response code: 200
+Response message: OK 
+258
+The time has not yet come. 
+It's currently: 2017-07-18T15:20:02-04:00
+Response code: 200
+Response message: OK 
+265
+The time has not yet come. 
+It's currently: 2017-07-18T15:30:01-04:00
+Response code: 200
+Response message: OK 
+272
+The time has not yet come. 
+It's currently: 2017-07-18T15:40:00-04:00
+Response code: 200
+Response message: OK 
+277
+The time has not yet come. 
+It's currently: 2017-07-18T15:50:01-04:00
+Response code: 200
+Response message: OK 
+284
+The time has not yet come. 
+It's currently: 2017-07-18T16:00:00-04:00
+Response code: 200
+Response message: OK 
+287
+The time has not yet come. 
+It's currently: 2017-07-18T16:10:01-04:00
+Response code: 200
+Response message: OK 
+295
+The time has not yet come. 
+It's currently: 2017-07-18T16:20:01-04:00
+Response code: 200
+Response message: OK 
+301
+Light the pegacorn!
+It's currently: 2017-07-18T16:30:01-04:00
+Response code: 200
+Response message: OK 
+303
+Light the pegacorn!
+It's currently: 2017-07-18T16:40:01-04:00
+Response code: 200
+Response message: OK 
+309
+Light the pegacorn!
+It's currently: 2017-07-18T16:50:02-04:00
+Response code: 200
+Response message: OK 
+310
+Light the pegacorn!
+It's currently: 2017-07-18T17:00:00-04:00
+Response code: 200
+Response message: OK 
+315
+Light the pegacorn!
+It's currently: 2017-07-18T17:10:01-04:00
+Response code: 200
+Response message: OK 
+327
+Light the pegacorn!
+It's currently: 2017-07-18T17:20:01-04:00
+Response code: 200
+Response message: OK 
+331
+Light the pegacorn!
+It's currently: 2017-07-18T17:30:00-04:00
+Response code: 200
+Response message: OK 
+336
+Light the pegacorn!
+It's currently: 2017-07-18T17:40:01-04:00
+Response code: 200
+Response message: OK 
+342
+Light the pegacorn!
+It's currently: 2017-07-18T17:50:01-04:00
+Response code: 200
+Response message: OK 
+345
+Light the pegacorn!
