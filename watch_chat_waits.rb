@@ -17,25 +17,39 @@
 # This one has a section on Consuming WebSocket Services
 # https://www.igvita.com/2009/12/22/ruby-websockets-tcp-for-the-browser/
 
+# EventMachine-HttpRequest documentation: 
+# https://github.com/igrigorik/em-http-request/wiki/Issuing-Requests
+
 require 'eventmachine'
 require 'em-http-request'
+require "/Users/user/Desktop/Pegacorn_Project/.gitignore/pegacorn_secrets"
 
-EventMachine.run do
-  http = EventMachine::HttpRequest.new("wss://rtm.zopim.com/stream").get :timeout => 0
-end
+EventMachine.run {
+	http = EventMachine::HttpRequest.new(wss://rtm.zopim.com/stream).get
 
-  http.errback { puts "oops" }
-  http.callback {
-    puts "WebSocket connected!"
-  }
+	options = {
+          :connect_timeout => 5,        # default connection setup timeout
+          :inactivity_timeout => 10,    # default connection inactivity (post-setup) timeout
 
-  http.stream { |msg|
-    puts "Recieved: #{msg}"
-    http.send "Pong: #{msg}"
-  }
+ 		request_options = {
+ 			:head => {
+ 				'authorization' => [ZendeskSecrets::ZOPIM_USERNAME, ZendeskSecrets::ZOPIM_PASSWORD] 
+ 			}
+ 		}
 
-  ws.close(1000)
+ 	# Next, I need to find out how to Convert this to Ruby and send it as a message
+ 	# to the server:
+ 	#{
+    #	topic: "chats.waiting_time_avg",
+    #	action: "subscribe",
+    #	window: 30
+	#}
 
+	# I will then also need a method for parsing the response.
+
+ 	
+ 		EventMachine.stop
+ 	}
 
 # if waiting_time_avg <= 45
 # 	puts "Light the pegacorn!"
