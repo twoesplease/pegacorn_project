@@ -566,3 +566,38 @@ Response message: Unauthorized
 /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- ./.gitignore/pegacorn_secrets (LoadError)
 	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
 	from /Users/user/Desktop/Pegacorn_Project/count_good_ratings.rb:9:in `<main>'
+It's currently: 2017-07-19T19:10:01-04:00
+Response code: 200
+Response message: OK 
+446
+Light the pegacorn!
+It's currently: 2017-07-19T19:20:02-04:00
+Response code: 200
+Response message: OK 
+447
+Light the pegacorn!
+It's currently: 2017-07-19T19:50:01-04:00
+Response code: 200
+Response message: OK 
+461
+Light the pegacorn!
+It's currently: 2017-07-19T20:00:01-04:00
+Response code: 200
+Response message: OK 
+463
+Light the pegacorn!
+It's currently: 2017-07-19T20:10:01-04:00
+Response code: 200
+Response message: OK 
+468
+Light the pegacorn!
+It's currently: 2017-07-19T20:20:02-04:00
+Response code: 200
+Response message: OK 
+469
+Light the pegacorn!
+It's currently: 2017-07-19T20:30:02-04:00
+Response code: 200
+Response message: OK 
+470
+Light the pegacorn!
