@@ -22,35 +22,48 @@
 
 require 'eventmachine'
 require 'em-http-request'
+require 'pp'
 require "/Users/user/Desktop/Pegacorn_Project/.gitignore/pegacorn_secrets"
 
 EventMachine.run {
-	http = EventMachine::HttpRequest.new(wss://rtm.zopim.com/stream).get
+	http = EventMachine::HttpRequest.new("wss://rtm.zopim.com/stream").get
 
 	options = {
           :connect_timeout => 5,        # default connection setup timeout
           :inactivity_timeout => 10,    # default connection inactivity (post-setup) timeout
+      }
 
- 		request_options = {
- 			:head => {
- 				'authorization' => [ZendeskSecrets::ZOPIM_USERNAME, ZendeskSecrets::ZOPIM_PASSWORD] 
- 			}
+ 	request_options = {
+ 		:head => {
+ 			'authorization' => [ZendeskSecrets::ZOPIM_USERNAME, ZendeskSecrets::ZOPIM_PASSWORD] 
  		}
+ 	}
 
- 	# Next, I need to find out how to Convert this to Ruby and send it as a message
- 	# to the server:
- 	#{
-    #	topic: "chats.waiting_time_avg",
-    #	action: "subscribe",
-    #	window: 30
-	#}
+ 	# Not sure how to parse this subscription
+ 	{
+    	topic: "chats.waiting_time_avg",
+    	action: "subscribe",
+    	window: 30
+	}
 
-	# I will then also need a method for parsing the response.
+	http.callback {
+		pp http.response_header.status
+		pp http.response_header
+	}
 
+	# Getting 0 for error code and nothing in the header, so it seems 
+	# like I'm not connecting at all
+	http.errback {
+		print "Uh oh, there was an error. \n"
+		pp http.response_header.status
+		pp http.response_header
+	}
  	
  		EventMachine.stop
  	}
 
+ 	puts "\n Ok, done."
+  
 # if waiting_time_avg <= 45
 # 	puts "Light the pegacorn!"
 # else
