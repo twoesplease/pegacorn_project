@@ -1161,6 +1161,7 @@ Response code: 200
 Response message: OK 
 470
 Light the pegacorn!
+<<<<<<< HEAD
 It's currently: 2017-07-19T20:40:02-04:00
 Response code: 200
 Response message: OK 
@@ -1445,4 +1446,54 @@ It's currently: 2017-07-20T19:40:00-04:00
 Response code: 200
 Response message: OK 
 432
+=======
+It's currently: 2017-07-20T19:50:01-04:00
+Response code: 200
+Response message: OK 
+434
+Light the pegacorn!
+It's currently: 2017-07-20T20:00:01-04:00
+Response code: 200
+Response message: OK 
+436
+Light the pegacorn!
+It's currently: 2017-07-20T20:10:01-04:00
+Response code: 200
+Response message: OK 
+443
+Light the pegacorn!
+It's currently: 2017-07-20T20:20:01-04:00
+Response code: 200
+Response message: OK 
+443
+Light the pegacorn!
+It's currently: 2017-07-20T20:30:01-04:00
+Response code: 200
+Response message: OK 
+444
+Light the pegacorn!
+It's currently: 2017-07-20T20:40:01-04:00
+Response code: 200
+Response message: OK 
+450
+Light the pegacorn!
+It's currently: 2017-07-20T20:50:01-04:00
+Response code: 200
+Response message: OK 
+450
+Light the pegacorn!
+It's currently: 2017-07-20T21:00:00-04:00
+Response code: 200
+Response message: OK 
+451
+Light the pegacorn!
+It's currently: 2017-07-20T21:10:02-04:00
+Response code: 200
+Response message: OK 
+453
+Light the pegacorn!
+It's currently: 2017-07-20T21:24:46-04:00
+Response code: 200
+Response message: OK 
+458
 Light the pegacorn!
