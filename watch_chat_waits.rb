@@ -25,37 +25,40 @@ require 'em-http-request'
 require 'pp'
 require '/Users/user/Desktop/Pegacorn_Project/.gitignore/pegacorn_secrets'
 
-# May needto move OAuth token to its own hash, as well as the last three key/value
+# May need to move OAuth token to its own hash, as well as the last three key/value
 # pairs, since they're the metric I want to subscribe to.  
 # The http item only takes 1-2 args tho, so I can't pass in three hash vars.
-EventMachine.run do
-	options = {
+EventMachine.run {
+	request_options = {
         :connect_timeout => 5,        # default connection setup timeout
-        :inactivity_timeout => 10,    # default connection inactivity (post-setup) timeout
-        :Authorization => 'Bearer ' + ZendeskSecrets::OAUTH_SECRET,
-        :topic => "chats.waiting_time_avg",
+        :inactivity_timeout => 10    # default connection inactivity (post-setup) timeout
+ 	}
+
+ 	options = {
+ 		:topic => "chats.waiting_time_avg",
     	:action =>"subscribe",
-    	:window => 30
-      }
+    	:window => 30,
+    	:authorization =>['Bearer ' + ZendeskSecrets::OAUTH_SECRET]
+ 	}
 
- 	http = EventMachine::HttpRequest.new('wss://rtm.zopim.com/stream', options).get
+ 	http = EventMachine::HttpRequest.new('wss://rtm.zopim.com/stream', options).get request_options
 
-	http.callback do
+	http.callback {
 		pp http.response_header.status
 		pp http.response_header
-	end
+		EventMachine.stop
+	}
 
 	# Getting 0 for error code and nothing in the header, so it seems 
 	# like I'm not connecting at all
-	http.errback do
+	http.errback {
 		print "Uh oh, there was an error. \n"
 		pp http.response_header.status
 		pp http.response_header
-	end
+		EventMachine.stop
+	}
+}
  	
- 		EventMachine.stop
- 	end
-
  	puts "\nOk, done."
   
 # if waiting_time_avg <= 45
