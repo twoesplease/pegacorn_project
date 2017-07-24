@@ -1497,6 +1497,7 @@ Response code: 200
 Response message: OK 
 458
 Light the pegacorn!
+<<<<<<< HEAD
 It's currently: 2017-07-20T21:30:01-04:00
 Response code: 200
 Response message: OK 
@@ -1781,4 +1782,8 @@ It's currently: 2017-07-21T20:10:01-04:00
 Response code: 200
 Response message: OK 
 396
+It's currently: 2017-07-21T21:50:01-04:00
+Response code: 200
+Response message: OK 
+412
 Light the pegacorn!
