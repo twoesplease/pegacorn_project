@@ -25,20 +25,20 @@ require 'em-http-request'
 require 'pp'
 require '/Users/user/Desktop/Pegacorn_Project/.gitignore/pegacorn_secrets'
 
-# May need to move OAuth token to its own hash, as well as the last three key/value
-# pairs, since they're the metric I want to subscribe to.  
-# The http item only takes 1-2 args tho, so I can't pass in three hash vars.
 EventMachine.run {
 	request_options = {
         :connect_timeout => 5,        # default connection setup timeout
         :inactivity_timeout => 10    # default connection inactivity (post-setup) timeout
  	}
 
+ 	# So the token below is for the mailchimp login, but 
+	# not Zopim.  I think I need to generate a new access token for Zopim
+	# as described here: https://help.zendesk.com/hc/en-us/articles/115002036967
  	options = {
  		:topic => "chats.waiting_time_avg",
     	:action =>"subscribe",
     	:window => 30,
-    	:authorization =>['Bearer ' + ZendeskSecrets::OAUTH_SECRET]
+    	:authorization =>['Bearer ' + ZendeskSecrets::OAUTH_ACCESS_TOKEN]
  	}
 
  	http = EventMachine::HttpRequest.new('wss://rtm.zopim.com/stream', options).get request_options
