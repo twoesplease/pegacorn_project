@@ -1497,6 +1497,7 @@ Response code: 200
 Response message: OK 
 458
 Light the pegacorn!
+<<<<<<< HEAD
 It's currently: 2017-07-20T21:30:01-04:00
 Response code: 200
 Response message: OK 
@@ -1781,4 +1782,298 @@ It's currently: 2017-07-21T20:10:01-04:00
 Response code: 200
 Response message: OK 
 396
+It's currently: 2017-07-21T21:50:01-04:00
+Response code: 200
+Response message: OK 
+412
 Light the pegacorn!
+It's currently: 2017-07-24T08:10:01-04:00
+Response code: 200
+Response message: OK 
+40
+The time has not yet come. 
+It's currently: 2017-07-24T08:20:01-04:00
+Response code: 200
+Response message: OK 
+42
+The time has not yet come. 
+It's currently: 2017-07-24T08:30:02-04:00
+Response code: 200
+Response message: OK 
+45
+The time has not yet come. 
+It's currently: 2017-07-24T08:40:01-04:00
+Response code: 200
+Response message: OK 
+48
+The time has not yet come. 
+It's currently: 2017-07-24T08:50:02-04:00
+Response code: 200
+Response message: OK 
+50
+The time has not yet come. 
+It's currently: 2017-07-24T09:00:02-04:00
+Response code: 200
+Response message: OK 
+53
+The time has not yet come. 
+It's currently: 2017-07-24T09:10:01-04:00
+Response code: 200
+Response message: OK 
+55
+The time has not yet come. 
+It's currently: 2017-07-24T09:20:01-04:00
+Response code: 200
+Response message: OK 
+60
+The time has not yet come. 
+It's currently: 2017-07-24T09:30:01-04:00
+Response code: 200
+Response message: OK 
+64
+The time has not yet come. 
+It's currently: 2017-07-24T09:40:01-04:00
+Response code: 200
+Response message: OK 
+68
+The time has not yet come. 
+It's currently: 2017-07-24T09:50:01-04:00
+Response code: 200
+Response message: OK 
+71
+The time has not yet come. 
+It's currently: 2017-07-24T10:00:02-04:00
+Response code: 200
+Response message: OK 
+74
+The time has not yet come. 
+It's currently: 2017-07-24T10:10:01-04:00
+Response code: 200
+Response message: OK 
+82
+The time has not yet come. 
+It's currently: 2017-07-24T10:20:01-04:00
+Response code: 200
+Response message: OK 
+84
+The time has not yet come. 
+It's currently: 2017-07-24T10:30:01-04:00
+Response code: 200
+Response message: OK 
+88
+The time has not yet come. 
+It's currently: 2017-07-24T10:40:00-04:00
+Response code: 200
+Response message: OK 
+101
+The time has not yet come. 
+It's currently: 2017-07-24T10:50:01-04:00
+Response code: 200
+Response message: OK 
+103
+The time has not yet come. 
+It's currently: 2017-07-24T11:04:30-04:00
+Response code: 200
+Response message: OK 
+108
+The time has not yet come. 
+It's currently: 2017-07-24T11:10:01-04:00
+Response code: 200
+Response message: OK 
+109
+The time has not yet come. 
+It's currently: 2017-07-24T11:20:01-04:00
+Response code: 200
+Response message: OK 
+121
+The time has not yet come. 
+It's currently: 2017-07-24T11:30:01-04:00
+Response code: 200
+Response message: OK 
+124
+The time has not yet come. 
+It's currently: 2017-07-24T11:44:25-04:00
+Response code: 200
+Response message: OK 
+134
+The time has not yet come. 
+It's currently: 2017-07-24T11:50:01-04:00
+Response code: 200
+Response message: OK 
+139
+The time has not yet come. 
+It's currently: 2017-07-24T12:00:01-04:00
+Response code: 200
+Response message: OK 
+141
+The time has not yet come. 
+It's currently: 2017-07-24T12:10:01-04:00
+Response code: 200
+Response message: OK 
+144
+The time has not yet come. 
+It's currently: 2017-07-24T12:20:01-04:00
+Response code: 200
+Response message: OK 
+146
+The time has not yet come. 
+It's currently: 2017-07-24T12:30:01-04:00
+Response code: 200
+Response message: OK 
+147
+The time has not yet come. 
+It's currently: 2017-07-24T12:40:01-04:00
+Response code: 200
+Response message: OK 
+155
+The time has not yet come. 
+It's currently: 2017-07-24T12:50:00-04:00
+Response code: 200
+Response message: OK 
+158
+The time has not yet come. 
+It's currently: 2017-07-24T13:00:01-04:00
+Response code: 200
+Response message: OK 
+158
+The time has not yet come. 
+It's currently: 2017-07-24T13:10:00-04:00
+Response code: 200
+Response message: OK 
+162
+The time has not yet come. 
+It's currently: 2017-07-24T13:20:01-04:00
+Response code: 200
+Response message: OK 
+167
+The time has not yet come. 
+It's currently: 2017-07-24T13:30:01-04:00
+Response code: 200
+Response message: OK 
+170
+The time has not yet come. 
+It's currently: 2017-07-24T13:40:01-04:00
+Response code: 200
+Response message: OK 
+172
+The time has not yet come. 
+It's currently: 2017-07-24T13:50:01-04:00
+Response code: 200
+Response message: OK 
+174
+The time has not yet come. 
+It's currently: 2017-07-24T14:00:00-04:00
+Response code: 200
+Response message: OK 
+176
+The time has not yet come. 
+It's currently: 2017-07-24T14:10:01-04:00
+Response code: 200
+Response message: OK 
+183
+The time has not yet come. 
+It's currently: 2017-07-24T14:20:01-04:00
+Response code: 200
+Response message: OK 
+190
+The time has not yet come. 
+It's currently: 2017-07-24T14:32:46-04:00
+Response code: 200
+Response message: OK 
+197
+The time has not yet come. 
+It's currently: 2017-07-24T14:40:01-04:00
+Response code: 200
+Response message: OK 
+198
+The time has not yet come. 
+It's currently: 2017-07-24T14:50:01-04:00
+Response code: 200
+Response message: OK 
+200
+The time has not yet come. 
+It's currently: 2017-07-24T15:01:24-04:00
+Response code: 200
+Response message: OK 
+205
+The time has not yet come. 
+It's currently: 2017-07-24T15:10:01-04:00
+Response code: 200
+Response message: OK 
+205
+The time has not yet come. 
+It's currently: 2017-07-24T15:20:01-04:00
+Response code: 200
+Response message: OK 
+207
+The time has not yet come. 
+It's currently: 2017-07-24T15:30:01-04:00
+Response code: 200
+Response message: OK 
+213
+The time has not yet come. 
+It's currently: 2017-07-24T15:40:00-04:00
+Response code: 200
+Response message: OK 
+215
+The time has not yet come. 
+It's currently: 2017-07-24T15:50:01-04:00
+Response code: 200
+Response message: OK 
+218
+The time has not yet come. 
+It's currently: 2017-07-24T16:00:02-04:00
+Response code: 200
+Response message: OK 
+221
+The time has not yet come. 
+It's currently: 2017-07-24T16:11:07-04:00
+Response code: 200
+Response message: OK 
+225
+The time has not yet come. 
+It's currently: 2017-07-24T16:20:01-04:00
+Response code: 200
+Response message: OK 
+228
+The time has not yet come. 
+It's currently: 2017-07-24T16:30:01-04:00
+Response code: 200
+Response message: OK 
+229
+The time has not yet come. 
+It's currently: 2017-07-24T16:40:01-04:00
+Response code: 200
+Response message: OK 
+234
+The time has not yet come. 
+It's currently: 2017-07-24T16:50:00-04:00
+Response code: 200
+Response message: OK 
+237
+The time has not yet come. 
+It's currently: 2017-07-24T17:00:01-04:00
+Response code: 200
+Response message: OK 
+238
+The time has not yet come. 
+It's currently: 2017-07-24T20:00:06-04:00
+Response code: 200
+Response message: OK 
+280
+The time has not yet come. 
+It's currently: 2017-07-24T20:10:01-04:00
+Response code: 200
+Response message: OK 
+281
+The time has not yet come. 
+It's currently: 2017-07-24T20:20:01-04:00
+Response code: 200
+Response message: OK 
+283
+The time has not yet come. 
+It's currently: 2017-07-24T20:30:00-04:00
+Response code: 200
+Response message: OK 
+283
+The time has not yet come. 
