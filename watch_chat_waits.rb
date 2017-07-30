@@ -38,7 +38,10 @@ EventMachine.run {
  		:topic => "chats.waiting_time_avg",
     	:action =>"subscribe",
     	:window => 30,
-    	:authorization =>['Bearer ' + ZendeskSecrets::OAUTH_ACCESS_TOKEN]
+
+    	:head => {
+    	'authorization' => 'Bearer' + ZendeskSecrets::ZOPIM_OAUTH_CODE
+    	}
  	}
 
  	http = EventMachine::HttpRequest.new('wss://rtm.zopim.com/stream', options).get request_options
