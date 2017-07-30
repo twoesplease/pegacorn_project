@@ -5,6 +5,7 @@
 require "net/http"
 require "json"
 require "date"
+require "pi_piper"
 # Have to hardcode this file path bc cron can't see the relative path
 require "/Users/user/Desktop/Pegacorn_Project/.gitignore/pegacorn_secrets"
 	
@@ -45,6 +46,13 @@ puts hashed_body["count"]
 
 if hashed_body["count"] >= 300
 	puts "Light the pegacorn!"
+	# pin = PiPiper::Pin.new( :pin => 17, :direction => :out )
+	# pin.off
+	# 1.times do
+	# 	pin.on
+	# 	sleep 15 #seconds
+	# 	pin.off
+	# end 
 else
 	puts "The time has not yet come. \n"
 end
