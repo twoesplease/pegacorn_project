@@ -1,4 +1,4 @@
-## Trigger once day crew reaches 300 good ratings for the day ##
+## Trigger once day crew reaches 300 good ratings for the day & continue lighting once per hour for the remainder of the day ##
 	# Zendesk API Documentation on Satisfaction Ratings: 
 	# https://developer.zendesk.com/rest_api/docs/core/satisfaction_ratings
 
