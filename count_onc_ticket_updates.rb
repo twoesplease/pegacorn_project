@@ -1,4 +1,4 @@
-## Trigger once ONC hits 45 solves for the day ##
+## Trigger once ONC hits 45 solves for the day & continue lighting once per hour for the remainder of the shift ##
 	# Zendesk search API documentation: https://developer.zendesk.com/rest_api/docs/core/search 
 
 require "net/http"
@@ -18,7 +18,7 @@ def tomorrow_at_6am_iso
 	# Add 1 to today's date to make it tomorrow!
 	add_one_for_tomorrow = (today[2].to_i) + 1
 	# Swap out today's date in the array to get tomorrow
-	tomorrow = today.map do |x| 
+	today.map do |x| 
 		if x==today[2] 
 			add_one_for_tomorrow
 		else 
@@ -48,9 +48,9 @@ uri.query = URI.encode_www_form(params)
 req = Net::HTTP::Get.new(uri)
 req.basic_auth ZendeskSecrets::ZENDESK_USERNAME, ZendeskSecrets::ZENDESK_PASSWORD
 	
-	res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) {|http|
-		http.request(req)
-	}
+res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) {|http|
+	http.request(req)
+}
 	
 puts "It's currently: #{DateTime.now}"
 puts "Response code: #{res.code}"
@@ -58,7 +58,6 @@ puts "Response message: #{res.message} \n"
 
 # We need hashed_body in order to output a hash to get the count.  
 hashed_body = JSON.parse(res.body)
-
 # If we need to look at the body (we'll need to change limit filter in params above):
 # prettified_body = JSON.pretty_generate(hashed_body)
 puts hashed_body["count"]
