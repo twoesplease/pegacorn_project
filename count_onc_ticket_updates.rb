@@ -1,12 +1,12 @@
 ## Trigger once ONC hits 45 solves for the day & continue lighting once per hour for the remainder of the shift ##
 	# Zendesk search API documentation: https://developer.zendesk.com/rest_api/docs/core/search 
 
-require "net/http"
-require "json"
-require "date"
-require "pi_piper"
+require 'net/http'
+require 'json'
+require 'date'
+require 'pi_piper'
 # Have to hardcode this file path bc cron can't see the relative path
-require "/Users/user/Desktop/Pegacorn_Project/.gitignore/pegacorn_secrets"
+require '/Users/tyoung/Pegacorn_Project/.gitignore/pegacorn_secrets'
 
 # Get the year, month, date for today and then add the timestamp for 8pm
 def today_at_8pm_iso 
@@ -26,8 +26,8 @@ def tomorrow_at_6am_iso
 		end
 	end
 	# Add the timestamp of 6am to the end of the array
-	tomorrow.push("T06:00:00-04:00")
-	tmw_at_6am = tomorrow.join("-")
+	tmw_at_6am = today.join("-")
+	tmw_at_6am = tmw_at_6am + "T06:00:00-04:00"
     DateTime.parse(tmw_at_6am).iso8601
 end
 
@@ -71,7 +71,7 @@ if hashed_body["count"] >= 45
 	# 	pin.on
 	# 	sleep 15 #seconds
 	# 	pin.off
-	end 
+	# end 
 else
 	puts "The time has not yet come. \n"
 end

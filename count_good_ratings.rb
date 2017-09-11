@@ -7,7 +7,7 @@ require "json"
 require "date"
 require "pi_piper"
 # Have to hardcode this file path bc cron can't see the relative path
-require "/Users/user/Desktop/Pegacorn_Project/.gitignore/pegacorn_secrets"
+require "/Users/tyoung/Pegacorn_Project/.gitignore/pegacorn_secrets.rb"
 	
 # Today's date has to be converted to seconds bc the Zendesk API requires an integer 
 # for the start_time filter
