@@ -1,8 +1,8 @@
 ## Trigger when chat wait times are below 40s ##
-# Zendesk streaming chat API documentation here: 
-#https://developer.zendesk.com/rest_api/docs/chat/apis 
+# Zendesk streaming chat API documentation here:
+# https://developer.zendesk.com/rest_api/docs/chat/apis
 
-# EventMachine-HttpRequest documentation: 
+# EventMachine-HttpRequest documentation:
 # https://github.com/igrigorik/em-http-request/wiki/Issuing-Requests
 
 require 'eventmachine'
@@ -13,9 +13,9 @@ require '/Users/tyoung/Pegacorn_Project/.gitignore/pegacorn_secrets'
 EventMachine.run do 
 
   connection_options = {
-    :connect_timeout => 5,        # default connection setup timeout
-    :inactivity_timeout => 10,    # default connection inactivity (post-setup) timeout
-  }
+    :connect_timeout => 5, # default connection setup timeout
+    :inactivity_timeout => 10, # default connection inactivity (post-setup) timeout}
+  }    
 
  	request_options = {
  		:topic => 'chats.waiting_time_avg',
@@ -26,7 +26,8 @@ EventMachine.run do
     }
   }
 
-  http = EventMachine::HttpRequest.new('wss://rtm.zopim.com/stream', request_options).get request_options
+  http = EventMachine::HttpRequest.new('wss://rtm.zopim.com/stream', 
+                                       connection_options).get request_options
 
 	http.callback {
 		pp http.response_header.status
@@ -35,8 +36,6 @@ EventMachine.run do
  	  puts "\nOk, done."
 	}
 
-	# Getting 0 for error code and nothing in the header, so it seems 
-	# like I'm not connecting at all
 	http.errback {
 		print "Uh oh, there was an error. \n"
 		pp http.response_header.status
@@ -48,7 +47,6 @@ EventMachine.run do
 
 end
 
-  
 # if waiting_time_avg <= 45
 # 	puts "Light the pegacorn!"
 # else

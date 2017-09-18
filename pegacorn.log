@@ -8111,3 +8111,937 @@ Response code: 200
 Response message: OK 
 330
 Light the pegacorn!
+It's currently: 2017-09-13T16:20:01-04:00
+Response code: 200
+Response message: OK 
+332
+Light the pegacorn!
+/usr/local/Cellar/ruby/2.4.1_2/lib/ruby/2.4.0/net/http.rb:906:in `rescue in block in connect': Failed to open TCP connection to mailchimp.zendesk.com:443 (getaddrinfo: nodename nor servname provided, or not known) (SocketError)
+	from /usr/local/Cellar/ruby/2.4.1_2/lib/ruby/2.4.0/net/http.rb:903:in `block in connect'
+	from /usr/local/Cellar/ruby/2.4.1_2/lib/ruby/2.4.0/timeout.rb:93:in `block in timeout'
+	from /usr/local/Cellar/ruby/2.4.1_2/lib/ruby/2.4.0/timeout.rb:103:in `timeout'
+	from /usr/local/Cellar/ruby/2.4.1_2/lib/ruby/2.4.0/net/http.rb:902:in `connect'
+	from /usr/local/Cellar/ruby/2.4.1_2/lib/ruby/2.4.0/net/http.rb:887:in `do_start'
+	from /usr/local/Cellar/ruby/2.4.1_2/lib/ruby/2.4.0/net/http.rb:876:in `start'
+	from /usr/local/Cellar/ruby/2.4.1_2/lib/ruby/2.4.0/net/http.rb:608:in `start'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:33:in `<main>'
+It's currently: 2017-09-13T16:50:01-04:00
+Response code: 200
+Response message: OK 
+345
+Light the pegacorn!
+It's currently: 2017-09-13T17:00:01-04:00
+Response code: 200
+Response message: OK 
+349
+Light the pegacorn!
+It's currently: 2017-09-13T17:10:01-04:00
+Response code: 200
+Response message: OK 
+363
+Light the pegacorn!
+It's currently: 2017-09-13T17:20:01-04:00
+Response code: 200
+Response message: OK 
+368
+Light the pegacorn!
+It's currently: 2017-09-13T17:30:02-04:00
+Response code: 200
+Response message: OK 
+371
+Light the pegacorn!
+It's currently: 2017-09-13T17:40:01-04:00
+Response code: 200
+Response message: OK 
+375
+Light the pegacorn!
+It's currently: 2017-09-13T17:50:01-04:00
+Response code: 200
+Response message: OK 
+378
+Light the pegacorn!
+It's currently: 2017-09-13T18:00:01-04:00
+Response code: 200
+Response message: OK 
+381
+Light the pegacorn!
+It's currently: 2017-09-13T18:10:02-04:00
+Response code: 200
+Response message: OK 
+389
+Light the pegacorn!
+It's currently: 2017-09-13T18:20:01-04:00
+Response code: 200
+Response message: OK 
+394
+Light the pegacorn!
+It's currently: 2017-09-13T18:30:01-04:00
+Response code: 200
+Response message: OK 
+398
+Light the pegacorn!
+It's currently: 2017-09-13T18:40:02-04:00
+Response code: 200
+Response message: OK 
+402
+Light the pegacorn!
+It's currently: 2017-09-14T09:10:01-04:00
+Response code: 200
+Response message: OK 
+102
+The time has not yet come. 
+It's currently: 2017-09-14T09:20:01-04:00
+Response code: 200
+Response message: OK 
+105
+The time has not yet come. 
+It's currently: 2017-09-14T09:30:01-04:00
+Response code: 200
+Response message: OK 
+107
+The time has not yet come. 
+It's currently: 2017-09-14T09:40:01-04:00
+Response code: 200
+Response message: OK 
+115
+The time has not yet come. 
+It's currently: 2017-09-14T09:50:01-04:00
+Response code: 200
+Response message: OK 
+121
+The time has not yet come. 
+It's currently: 2017-09-14T10:00:01-04:00
+Response code: 200
+Response message: OK 
+127
+The time has not yet come. 
+It's currently: 2017-09-14T10:10:01-04:00
+Response code: 200
+Response message: OK 
+141
+The time has not yet come. 
+It's currently: 2017-09-14T10:20:01-04:00
+Response code: 200
+Response message: OK 
+148
+The time has not yet come. 
+It's currently: 2017-09-14T10:30:01-04:00
+Response code: 200
+Response message: OK 
+152
+The time has not yet come. 
+It's currently: 2017-09-14T10:40:01-04:00
+Response code: 200
+Response message: OK 
+156
+The time has not yet come. 
+It's currently: 2017-09-14T10:50:01-04:00
+Response code: 200
+Response message: OK 
+160
+The time has not yet come. 
+It's currently: 2017-09-14T11:00:01-04:00
+Response code: 200
+Response message: OK 
+166
+The time has not yet come. 
+It's currently: 2017-09-14T11:10:01-04:00
+Response code: 200
+Response message: OK 
+177
+The time has not yet come. 
+It's currently: 2017-09-14T11:20:01-04:00
+Response code: 200
+Response message: OK 
+182
+The time has not yet come. 
+It's currently: 2017-09-14T11:30:01-04:00
+Response code: 200
+Response message: OK 
+187
+The time has not yet come. 
+It's currently: 2017-09-14T11:40:01-04:00
+Response code: 200
+Response message: OK 
+195
+The time has not yet come. 
+It's currently: 2017-09-14T11:50:02-04:00
+Response code: 200
+Response message: OK 
+197
+The time has not yet come. 
+It's currently: 2017-09-14T12:00:01-04:00
+Response code: 200
+Response message: OK 
+204
+The time has not yet come. 
+It's currently: 2017-09-14T12:10:01-04:00
+Response code: 200
+Response message: OK 
+221
+The time has not yet come. 
+It's currently: 2017-09-14T12:20:01-04:00
+Response code: 200
+Response message: OK 
+228
+The time has not yet come. 
+It's currently: 2017-09-14T12:30:01-04:00
+Response code: 200
+Response message: OK 
+232
+The time has not yet come. 
+It's currently: 2017-09-14T12:40:01-04:00
+Response code: 200
+Response message: OK 
+239
+The time has not yet come. 
+It's currently: 2017-09-14T12:50:01-04:00
+Response code: 200
+Response message: OK 
+245
+The time has not yet come. 
+It's currently: 2017-09-14T13:00:02-04:00
+Response code: 200
+Response message: OK 
+246
+The time has not yet come. 
+It's currently: 2017-09-14T13:10:02-04:00
+Response code: 200
+Response message: OK 
+261
+The time has not yet come. 
+It's currently: 2017-09-14T13:22:21-04:00
+Response code: 200
+Response message: OK 
+266
+The time has not yet come. 
+It's currently: 2017-09-14T13:30:01-04:00
+Response code: 200
+Response message: OK 
+269
+The time has not yet come. 
+It's currently: 2017-09-14T13:40:02-04:00
+Response code: 200
+Response message: OK 
+277
+The time has not yet come. 
+It's currently: 2017-09-14T13:50:02-04:00
+Response code: 200
+Response message: OK 
+288
+The time has not yet come. 
+It's currently: 2017-09-14T14:00:01-04:00
+Response code: 200
+Response message: OK 
+290
+The time has not yet come. 
+It's currently: 2017-09-14T14:10:01-04:00
+Response code: 200
+Response message: OK 
+303
+Light the pegacorn!
+It's currently: 2017-09-14T14:20:02-04:00
+Response code: 200
+Response message: OK 
+307
+Light the pegacorn!
+It's currently: 2017-09-14T14:30:01-04:00
+Response code: 200
+Response message: OK 
+309
+Light the pegacorn!
+It's currently: 2017-09-14T14:40:01-04:00
+Response code: 200
+Response message: OK 
+315
+Light the pegacorn!
+It's currently: 2017-09-14T14:50:01-04:00
+Response code: 200
+Response message: OK 
+317
+Light the pegacorn!
+It's currently: 2017-09-14T15:00:01-04:00
+Response code: 200
+Response message: OK 
+322
+Light the pegacorn!
+It's currently: 2017-09-14T15:10:02-04:00
+Response code: 200
+Response message: OK 
+333
+Light the pegacorn!
+It's currently: 2017-09-14T15:20:02-04:00
+Response code: 200
+Response message: OK 
+337
+Light the pegacorn!
+It's currently: 2017-09-14T15:30:01-04:00
+Response code: 200
+Response message: OK 
+342
+Light the pegacorn!
+It's currently: 2017-09-14T15:40:01-04:00
+Response code: 200
+Response message: OK 
+350
+Light the pegacorn!
+It's currently: 2017-09-14T15:50:02-04:00
+Response code: 200
+Response message: OK 
+353
+Light the pegacorn!
+It's currently: 2017-09-14T16:00:01-04:00
+Response code: 200
+Response message: OK 
+357
+Light the pegacorn!
+It's currently: 2017-09-14T16:10:01-04:00
+Response code: 200
+Response message: OK 
+364
+Light the pegacorn!
+It's currently: 2017-09-14T16:20:01-04:00
+Response code: 200
+Response message: OK 
+370
+Light the pegacorn!
+It's currently: 2017-09-14T16:30:02-04:00
+Response code: 200
+Response message: OK 
+375
+Light the pegacorn!
+It's currently: 2017-09-14T16:40:01-04:00
+Response code: 200
+Response message: OK 
+387
+Light the pegacorn!
+It's currently: 2017-09-14T16:50:01-04:00
+Response code: 200
+Response message: OK 
+392
+Light the pegacorn!
+It's currently: 2017-09-14T17:00:01-04:00
+Response code: 200
+Response message: OK 
+393
+Light the pegacorn!
+It's currently: 2017-09-14T17:10:02-04:00
+Response code: 200
+Response message: OK 
+403
+Light the pegacorn!
+It's currently: 2017-09-14T17:20:01-04:00
+Response code: 200
+Response message: OK 
+406
+Light the pegacorn!
+It's currently: 2017-09-14T17:30:01-04:00
+Response code: 200
+Response message: OK 
+407
+Light the pegacorn!
+It's currently: 2017-09-14T17:40:01-04:00
+Response code: 200
+Response message: OK 
+414
+Light the pegacorn!
+It's currently: 2017-09-14T17:50:02-04:00
+Response code: 200
+Response message: OK 
+417
+Light the pegacorn!
+It's currently: 2017-09-14T18:00:01-04:00
+Response code: 200
+Response message: OK 
+420
+Light the pegacorn!
+It's currently: 2017-09-14T18:10:01-04:00
+Response code: 200
+Response message: OK 
+430
+Light the pegacorn!
+It's currently: 2017-09-14T18:20:02-04:00
+Response code: 200
+Response message: OK 
+431
+Light the pegacorn!
+It's currently: 2017-09-14T18:30:01-04:00
+Response code: 200
+Response message: OK 
+434
+Light the pegacorn!
+It's currently: 2017-09-14T18:40:01-04:00
+Response code: 200
+Response message: OK 
+438
+Light the pegacorn!
+It's currently: 2017-09-14T18:50:01-04:00
+Response code: 200
+Response message: OK 
+441
+Light the pegacorn!
+It's currently: 2017-09-14T19:00:01-04:00
+Response code: 200
+Response message: OK 
+443
+Light the pegacorn!
+It's currently: 2017-09-14T19:10:01-04:00
+Response code: 200
+Response message: OK 
+452
+Light the pegacorn!
+It's currently: 2017-09-14T20:50:02-04:00
+Response code: 200
+Response message: OK 
+476
+Light the pegacorn!
+It's currently: 2017-09-14T21:00:02-04:00
+Response code: 200
+Response message: OK 
+476
+Light the pegacorn!
+It's currently: 2017-09-14T21:10:01-04:00
+Response code: 200
+Response message: OK 
+481
+Light the pegacorn!
+It's currently: 2017-09-14T21:20:01-04:00
+Response code: 200
+Response message: OK 
+482
+Light the pegacorn!
+It's currently: 2017-09-14T21:30:00-04:00
+Response code: 200
+Response message: OK 
+484
+Light the pegacorn!
+It's currently: 2017-09-14T21:40:01-04:00
+Response code: 200
+Response message: OK 
+484
+Light the pegacorn!
+It's currently: 2017-09-14T21:50:01-04:00
+Response code: 200
+Response message: OK 
+484
+Light the pegacorn!
+It's currently: 2017-09-15T08:20:02-04:00
+Response code: 200
+Response message: OK 
+70
+The time has not yet come. 
+It's currently: 2017-09-15T08:30:02-04:00
+Response code: 200
+Response message: OK 
+72
+The time has not yet come. 
+It's currently: 2017-09-15T08:40:01-04:00
+Response code: 200
+Response message: OK 
+76
+The time has not yet come. 
+It's currently: 2017-09-15T08:50:02-04:00
+Response code: 200
+Response message: OK 
+79
+The time has not yet come. 
+It's currently: 2017-09-15T09:00:02-04:00
+Response code: 200
+Response message: OK 
+81
+The time has not yet come. 
+It's currently: 2017-09-15T09:10:02-04:00
+Response code: 200
+Response message: OK 
+87
+The time has not yet come. 
+It's currently: 2017-09-15T09:20:01-04:00
+Response code: 200
+Response message: OK 
+88
+The time has not yet come. 
+It's currently: 2017-09-15T09:30:03-04:00
+Response code: 200
+Response message: OK 
+88
+The time has not yet come. 
+It's currently: 2017-09-15T09:40:01-04:00
+Response code: 200
+Response message: OK 
+93
+The time has not yet come. 
+It's currently: 2017-09-15T09:50:01-04:00
+Response code: 200
+Response message: OK 
+95
+The time has not yet come. 
+It's currently: 2017-09-15T10:00:01-04:00
+Response code: 200
+Response message: OK 
+97
+The time has not yet come. 
+It's currently: 2017-09-15T10:10:02-04:00
+Response code: 200
+Response message: OK 
+105
+The time has not yet come. 
+It's currently: 2017-09-15T10:20:02-04:00
+Response code: 200
+Response message: OK 
+110
+The time has not yet come. 
+It's currently: 2017-09-15T10:30:06-04:00
+Response code: 200
+Response message: OK 
+115
+The time has not yet come. 
+It's currently: 2017-09-15T10:40:01-04:00
+Response code: 200
+Response message: OK 
+118
+The time has not yet come. 
+It's currently: 2017-09-15T10:50:01-04:00
+Response code: 200
+Response message: OK 
+122
+The time has not yet come. 
+It's currently: 2017-09-15T11:00:02-04:00
+Response code: 200
+Response message: OK 
+129
+The time has not yet come. 
+It's currently: 2017-09-15T11:10:01-04:00
+Response code: 200
+Response message: OK 
+136
+The time has not yet come. 
+It's currently: 2017-09-15T11:20:01-04:00
+Response code: 200
+Response message: OK 
+144
+The time has not yet come. 
+It's currently: 2017-09-15T11:30:02-04:00
+Response code: 200
+Response message: OK 
+148
+The time has not yet come. 
+It's currently: 2017-09-15T11:40:02-04:00
+Response code: 200
+Response message: OK 
+155
+The time has not yet come. 
+It's currently: 2017-09-15T11:50:04-04:00
+Response code: 200
+Response message: OK 
+157
+The time has not yet come. 
+It's currently: 2017-09-15T12:00:06-04:00
+Response code: 200
+Response message: OK 
+161
+The time has not yet come. 
+It's currently: 2017-09-15T12:10:02-04:00
+Response code: 200
+Response message: OK 
+177
+The time has not yet come. 
+It's currently: 2017-09-15T12:20:01-04:00
+Response code: 200
+Response message: OK 
+183
+The time has not yet come. 
+It's currently: 2017-09-15T12:30:01-04:00
+Response code: 200
+Response message: OK 
+190
+The time has not yet come. 
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+Unable to load the EventMachine C extension; To use the pure-ruby reactor, require 'em/pure_ruby'
+/usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle, 9): Library not loaded: /usr/local/opt/ruby/lib/libruby.2.4.1.dylib (LoadError)
+  Referenced from: /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+  Reason: image not found - /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/rubyeventmachine.bundle
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/eventmachine-1.0.9/lib/eventmachine.rb:8:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/lib/ruby/gems/2.4.0/gems/pi_piper-2.0.0/lib/pi_piper.rb:1:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
+	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
+	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
