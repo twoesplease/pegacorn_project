@@ -9045,3 +9045,13 @@ Unable to load the EventMachine C extension; To use the pure-ruby reactor, requi
 	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:133:in `rescue in require'
 	from /usr/local/Cellar/ruby/2.4.2/lib/ruby/2.4.0/rubygems/core_ext/kernel_require.rb:40:in `require'
 	from /Users/tyoung/Pegacorn_Project/count_good_ratings.rb:8:in `<main>'
+It's currently: 2017-09-19T21:40:01-04:00
+Response code: 200
+Response message: OK 
+421
+Light the pegacorn!
+It's currently: 2017-09-19T21:50:01-04:00
+Response code: 200
+Response message: OK 
+423
+Light the pegacorn!

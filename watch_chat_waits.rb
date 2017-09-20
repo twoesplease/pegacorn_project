@@ -26,8 +26,11 @@ EventMachine.run do
     }
   }
 
-  http = EventMachine::HttpRequest.new('wss://rtm.zopim.com/stream', 
-                                       connection_options).get request_options
+  options = {
+  :authorization => ['Bearer', ZendeskSecrets::ZOPIM_OAUTH_ACCESS_TOKEN]
+  }
+
+  http = EventMachine::HttpRequest.new('wss://rtm.zopim.com/stream',options).get 
 
 	http.callback {
 		pp http.response_header.status
@@ -44,6 +47,9 @@ EventMachine.run do
 		EventMachine.stop
  	  puts "\nOk, done."
 	}
+
+  http.headers { |hash|  p [:headers, hash] }
+  http.stream  { |chunk| p [:data, chunk] }
 
 end
 
