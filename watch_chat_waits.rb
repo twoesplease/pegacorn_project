@@ -10,27 +10,27 @@ require 'em-http-request'
 require 'pp'
 require '/Users/tyoung/Pegacorn_Project/.gitignore/pegacorn_secrets'
 
-EventMachine.run do 
+EventMachine.run do
 
   connection_options = {
     :connect_timeout => 5, # default connection setup timeout
     :inactivity_timeout => 10, # default connection inactivity (post-setup) timeout}
-  }    
+  }
 
- 	request_options = {
- 		:topic => 'chats.waiting_time_avg',
-  	:action =>'subscribe',
-  	:window => 30,
-  	:head => {
-  	'authorization' => 'Bearer' + ZendeskSecrets::ZOPIM_OAUTH_ACCESS_TOKEN
-    }
+  request_options = {
+    # :topic => 'chats.waiting_time_avg',
+    # :action =>'subscribe',
+    # :window => 30,
+    # :head => {
+    'authorization' => 'Bearer' + ZendeskSecrets::ZENDESK_OAUTH_ACCESS_TOKEN
   }
 
   options = {
-  :authorization => ['Bearer', ZendeskSecrets::ZOPIM_OAUTH_ACCESS_TOKEN]
+    authorization: ('Bearer' + ZendeskSecrets::ZENDESK_OAUTH_ACCESS_TOKEN)
   }
 
-  http = EventMachine::HttpRequest.new('wss://rtm.zopim.com/stream',options).get 
+  http = EventMachine::HttpRequest.new('wss://rtm.zopim.com/stream',
+                                       authorization: ('Bearer' + ZendeskSecrets::ZENDESK_OAUTH_ACCESS_TOKEN)).get #request_options 
 
 	http.callback {
 		pp http.response_header.status
@@ -48,8 +48,8 @@ EventMachine.run do
  	  puts "\nOk, done."
 	}
 
-  http.headers { |hash|  p [:headers, hash] }
-  http.stream  { |chunk| p [:data, chunk] }
+  # http.headers { |hash|  p [:headers, hash] }
+  # http.stream  { |chunk| p [:data, chunk] }
 
 end
 
