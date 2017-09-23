@@ -30,7 +30,7 @@ EventMachine.run do
   }
 
   http = EventMachine::HttpRequest.new('wss://rtm.zopim.com/stream',
-                                       authorization: ('Bearer' + ZendeskSecrets::ZENDESK_OAUTH_ACCESS_TOKEN)).get #request_options 
+         authorization: "Bearer #{ZendeskSecrets::ZENDESK_OAUTH_ACCESS_TOKEN}").get #request_options} 
 
 	http.callback {
 		pp http.response_header.status

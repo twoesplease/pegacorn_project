@@ -3,12 +3,10 @@ require 'eventmachine'
 require '/Users/tyoung/Pegacorn_Project/.gitignore/pegacorn_secrets'
 
 EM.run do
-  options = {
-    headers:
-    { 'Authorization' => 'Bearer' + ZendeskSecrets::ZENDESK_OAUTH_ACCESS_TOKEN }
-  }
-
-  wss = Faye::WebSocket::Client.new('wss://rtm.zopim.com/stream', nil, options)
+  wss = Faye::WebSocket::Client.new('wss://rtm.zopim.com/stream',
+                                    nil,
+                                    :headers =>
+        { 'Authorization' => "Bearer #{ZendeskSecrets::ZENDESK_OAUTH_ACCESS_TOKEN}" })
 
   wss.on :open do
     p [:open]
