@@ -10,11 +10,16 @@ EM.run do
 
   wss.on :open do
     p [:open]
-    wss.send('Hello, world!')
+    wss.send(topic: 'chats.agents_online', action: 'subscribe', window: 30)
   end
 
   wss.on :message do |event|
-    p [:message, event.data]
+    # if :message.status_code != 200
+      # puts 'Invalid status code: ' + :message.status_code
+    # elsif :message.content.type == 'update'
+      # puts 'Here\'s your data:\n'
+      p [:message, event.data]
+    # end
   end
 
   wss.on :close do |event|
