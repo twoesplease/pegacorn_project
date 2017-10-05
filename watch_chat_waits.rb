@@ -1,60 +1,32 @@
-## Trigger when chat wait times are below 40s ##
-# Zendesk streaming chat API documentation here:
-# https://developer.zendesk.com/rest_api/docs/chat/apis
-
-# EventMachine-HttpRequest documentation:
-# https://github.com/igrigorik/em-http-request/wiki/Issuing-Requests
-
+require 'faye/websocket'
 require 'eventmachine'
-require 'em-http-request'
-require 'pp'
 require '/Users/tyoung/Pegacorn_Project/.gitignore/pegacorn_secrets'
+require 'json'
+require 'PrettyPrint'
 
-EventMachine.run do
+EM.run do
+  wss = Faye::WebSocket::Client.new('wss://rtm.zopim.com/stream',
+                                    nil,
+                                    :headers =>
+        { 'Authorization' => "Bearer #{ZendeskSecrets::ZENDESK_OAUTH_ACCESS_TOKEN}" })
 
-  connection_options = {
-    :connect_timeout => 5, # default connection setup timeout
-    :inactivity_timeout => 10, # default connection inactivity (post-setup) timeout}
-  }
+  wss.on :open do
+    p [:open]
+    msg = {}
+    msg[:topic] = 'chats.waiting_time_avg'
+    msg[:action] = 'subscribe'
+    msg[:window] = 30
+    wss.send msg.to_json
+  end
 
-  request_options = {
-    # :topic => 'chats.waiting_time_avg',
-    # :action =>'subscribe',
-    # :window => 30,
-    # :head => {
-    'authorization' => 'Bearer' + ZendeskSecrets::ZENDESK_OAUTH_ACCESS_TOKEN
-  }
+  wss.on :message do |event|
+    p [:message, event.data]
+    wss = true
+  end
 
-  options = {
-    authorization: ('Bearer' + ZendeskSecrets::ZENDESK_OAUTH_ACCESS_TOKEN)
-  }
-
-  http = EventMachine::HttpRequest.new('wss://rtm.zopim.com/stream',
-         authorization: "Bearer #{ZendeskSecrets::ZENDESK_OAUTH_ACCESS_TOKEN}").get #request_options} 
-
-	http.callback {
-		pp http.response_header.status
-		pp http.response_header
-		EventMachine.stop
- 	  puts "\nOk, done."
-	}
-
-	http.errback {
-		print "Uh oh, there was an error. \n"
-		pp http.response_header.status
-		pp http.response_header
-    pp http.response
-		EventMachine.stop
- 	  puts "\nOk, done."
-	}
-
-  # http.headers { |hash|  p [:headers, hash] }
-  # http.stream  { |chunk| p [:data, chunk] }
-
+  wss.on :close do |event|
+    p [:close, event.code, event.reason]
+    # Make bell sound
+    tput bel
+  end
 end
-
-# if waiting_time_avg <= 45
-# 	puts "Light the pegacorn!"
-# else
-# 	puts "The time has not yet come. \n"
-# end
