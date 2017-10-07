@@ -13038,3 +13038,23 @@ It's currently: 2017-10-06T17:10:01-04:00
 Response code: 200
 Response message: OK 
 
+/Users/tyoung/Pegacorn_Project/count_good_ratings.rb:47:in `<main>': undefined method `>=' for nil:NilClass (NoMethodError)
+It's currently: 2017-10-06T21:20:01-04:00
+Response code: 200
+Response message: OK 
+
+/Users/tyoung/Pegacorn_Project/count_good_ratings.rb:47:in `<main>': undefined method `>=' for nil:NilClass (NoMethodError)
+It's currently: 2017-10-06T21:30:01-04:00
+Response code: 200
+Response message: OK 
+
+/Users/tyoung/Pegacorn_Project/count_good_ratings.rb:47:in `<main>': undefined method `>=' for nil:NilClass (NoMethodError)
+It's currently: 2017-10-06T21:40:01-04:00
+Response code: 200
+Response message: OK 
+
+/Users/tyoung/Pegacorn_Project/count_good_ratings.rb:47:in `<main>': undefined method `>=' for nil:NilClass (NoMethodError)
+It's currently: 2017-10-06T21:50:00-04:00
+Response code: 200
+Response message: OK 
+
