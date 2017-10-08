@@ -17,21 +17,37 @@ EM.run do
     wss.send msg.to_json
   end
 
+
+def pegacorn_trigger_check(event)
+  tries ||= 3
+  h = JSON.parse(event.data).to_hash
+  wait_time_avg = [h.dig('content', 'data', 'waiting_time_avg')][0]
+  print 'Chat wait time average is currently'
+  if !wait_time_avg.to_i.zero? &&
+     wait_time_avg.to_i < 45
+    puts " #{wait_time_avg} seconds"
+    puts "\nLight the pegacorn!\n"
+  elsif wait_time_avg.to_i.zero?
+    puts ' in need of being re-checked.'
+    # recheck for a non-nil/non-zero wait time 2 more times
+  else
+    puts ' not available.'
+    puts "\nPegacorn time has not yet come.\n"
+  end
+rescue
+  retry unless (tries -= 1).zero?
+end
+
   # TODO : Set to try twice more if no results the first time.
+  # TODO : Break pegacorn_trigger_check into multiple methods so that
+  #        I can retry the first method if the wait time is zero.
+  #        Also want to retry the check a couple of times before
+  #        closing if the code isn't the successful 1006 code.
   # TODO : Trigger light if conditional is right.
-  # TODO : Set up cron job to trigger thisto run sometimes! 
+  # TODO : Set up cron job to trigger this to run sometimes!
+
   wss.on :message do |event|
-    h = JSON.parse(event.data).to_hash
-    wait_time_avg = [h.dig('content', 'data', 'waiting_time_avg')][0]
-    print 'Chat wait time average is currently'
-    if !wait_time_avg.to_i.zero? &&
-       wait_time_avg.to_i < 45
-      puts " #{wait_time_avg} seconds"
-      puts "\nLight the pegacorn!\n"
-    else
-      puts ' not available.'
-      puts "\nPegacorn time has not yet come.\n"
-    end
+    pegacorn_trigger_check(event)
 	# pin = PiPiper::Pin.new( :pin => 17, :direction => :out )
 	# pin.off
 	# 1.times do
