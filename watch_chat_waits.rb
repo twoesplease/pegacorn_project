@@ -3,6 +3,7 @@ require 'eventmachine'
 require '/Users/tyoung/Pegacorn_Project/.gitignore/pegacorn_secrets'
 require 'json'
 require 'pi_piper'
+require 'date'
 
 EM.run do
   wss = Faye::WebSocket::Client.new('wss://rtm.zopim.com/stream',
