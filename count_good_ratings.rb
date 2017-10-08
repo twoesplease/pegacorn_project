@@ -34,6 +34,7 @@ res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) {|http|
 	http.request(req)
 }
 
+puts "I'm checking the count of good ratings."
 puts "It's currently: #{DateTime.now}"
 puts "Response code: #{res.code}"
 puts "Response message: #{res.message} \n"
@@ -46,13 +47,13 @@ puts hashed_body["count"]
 
 if hashed_body["count"] >= 300
 	puts "Light the pegacorn!"
-	# pin = PiPiper::Pin.new( :pin => 17, :direction => :out )
-	# pin.off
-	# 1.times do
-	# 	pin.on
-	# 	sleep 15 #seconds
-	# 	pin.off
-	# end 
+  pin = PiPiper::Pin.new( :pin => 17, :direction => :out )
+  pin.off
+  1.times do
+    pin.on
+    sleep 15 #seconds
+    pin.off
+  end
 else
 	puts "The time has not yet come. \n"
 end

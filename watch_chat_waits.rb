@@ -28,17 +28,18 @@ EM.run do
     redo
   elsif !wait_time_avg.to_i.zero? &&
     wait_time_avg.to_i < 45
-    puts "Chat wait time average is currently #{wait_time_avg} seconds"
+    puts "It's currently #{DateTime.now}."
+    puts "Chat wait time average is #{wait_time_avg} seconds"
     puts "\nLight the pegacorn!\n"
-    # pin = PiPiper::Pin.new( :pin => 17, :direction => :out )
-    # pin.off
-    # 1.times do
-    # 	pin.on
-    # 	sleep 15 #seconds
-    # 	pin.off
-    # end 
+    pin = PiPiper::Pin.new( :pin => 17, :direction => :out )
+    pin.off
+    1.times do
+      pin.on
+      sleep 15 #seconds
+      pin.off
+    end
   else
-    puts 'Chat wait time average is currently  not available.'
+    puts 'Chat wait time average is not available.'
     puts "\nPegacorn time has not yet come.\n"
   end
   wss = true
