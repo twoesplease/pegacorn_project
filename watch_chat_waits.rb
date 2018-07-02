@@ -1,6 +1,6 @@
 require 'faye/websocket'
 require 'eventmachine'
-require '/Users/tyoung/Pegacorn_Project/.gitignore/pegacorn_secrets'
+require '/Users/tyoung/workspace/Pegacorn_Project/.gitignore/pegacorn_secrets'
 require 'json'
 require 'pi_piper'
 
