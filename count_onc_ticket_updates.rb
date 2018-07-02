@@ -1,4 +1,5 @@
 ## Trigger once ONC hits 45 solves for the day & continue lighting once per hour for the remainder of the shift ##
+#
 	# Zendesk search API documentation: https://developer.zendesk.com/rest_api/docs/core/search 
 
 require 'net/http'
@@ -6,7 +7,7 @@ require 'json'
 require 'date'
 require 'pi_piper'
 # Have to hardcode this file path bc cron can't see the relative path
-require '/Users/tyoung/Pegacorn_Project/.gitignore/pegacorn_secrets'
+require '/Users/tyoung/workspace/Pegacorn_Project/.gitignore/pegacorn_secrets.rb'
 
 # Get the year, month, date for today and then add the timestamp for 8pm
 def today_at_8pm_iso 
@@ -25,8 +26,7 @@ def tomorrow_at_6am_iso
 			x
 		end
 	end
-	# Add the timestamp of 6am to the end of the array
-	tmw_at_6am = today.join("-")
+	tmw_at_6am = today.join("-") 	# Add the timestamp of 6am to the end of the array
 	tmw_at_6am = tmw_at_6am + "T06:00:00-04:00"
     DateTime.parse(tmw_at_6am).iso8601
 end
@@ -35,7 +35,7 @@ end
 params = {
 	'sort_by' => 'created_at',
 	'sort_order' => 'asc',
-	'limit' => 1,
+	'limit' => 1, # Change this to inspect the body
 	'query' => "solved>=#{today_at_8pm_iso} solved<=#{tomorrow_at_6am_iso}"
 	}
 
@@ -58,11 +58,8 @@ puts "It's currently: #{DateTime.now}"
 puts "Response code: #{res.code}"
 puts "Response message: #{res.message} \n"
 
-# We need hashed_body in order to output a hash to get the count.  
 hashed_body = JSON.parse(res.body)
-# If we need to look at the body (we'll need to change limit filter in params above):
-# prettified_body = JSON.pretty_generate(hashed_body)
-puts hashed_body["count"]
+puts "Number of ONC ticket updates: #{hashed_body['count']}"
 
 if hashed_body["count"] >= 45
 	puts "Light the pegacorn!"
