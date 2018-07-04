@@ -11,15 +11,10 @@ require 'pi_piper'
 require '/Users/tyoung/workspace/Pegacorn_Project/.gitignore/pegacorn_secrets.rb'
 require 'pry'
 
-def convert_todays_date_to_integer
-  start_count_at_5AMEST = 32_400
-  @today_at_5am_in_seconds = DateTime.now.to_date.strftime('%s').to_i + start_count_at_5AMEST
-end
-
-def request_ratings_count_from_Zendesk
-  uri = URI('https://mailchimp.zendesk.com/api/v2/satisfaction_ratings.json')
+def fetch_ratings_from_zendesk(start_time)
+  uri = URI(ZendeskSecrets::SATISFACTION_RATINGS_ENDPOINT)
   params = {
-    'start_time' => @today_at_5am_in_seconds,
+    'start_time' => start_time,
     'score' => 'good',
     'sort_by' => 'created_at',
     'sort_order' => 'asc',
@@ -36,8 +31,8 @@ def request_ratings_count_from_Zendesk
   end
 end
 
-def log_output
-  puts "I'm checking the count of good ratings."
+def write_to_log_file
+  puts "\nI'm checking the count of good ratings."
   puts "It's currently: #{DateTime.now}"
   puts "Response code: #{@res.code}"
   puts "Response message: #{@res.message} \n"
@@ -46,21 +41,37 @@ def log_output
   puts "Number of satisfaction ratings: #{@hashed_body['satisfaction_ratings'].count}"
 end
 
-def trigger_light_on_RaspPi
-  if @hashed_body['satisfaction_ratings'].count >= 300
-    puts 'Light the pegacorn!'
-    pin = PiPiper::Pin.new(:pin => 17, :direction => :out)
-    pin.off
-    1.times do
-      pin.on
-      sleep 15 # seconds
-      pin.off
-    end
+def manage_light_on_rasp_pi
+  if satisfaction_goal_reached? 
+    light_the_pegacorn
   else
-    puts "The time has not yet come. \n"
+    puts "The time has not yet come.\n"
   end
 end
 
-request_ratings_count_from_Zendesk
-log_output
-trigger_light_on_RaspPi
+START_COUNT_AT_5AM_EST = 32_400
+
+def todays_date_to_integer
+  today_at_5am_in_seconds = DateTime.now.to_date.strftime('%s').to_i + START_COUNT_AT_5AM_EST
+end
+
+def satisfaction_goal_reached?
+  if @hashed_body['satisfaction_ratings'].count >= 300
+    return true
+  else
+    return false
+  end
+end
+
+def light_the_pegacorn
+  puts 'Light the pegacorn!'
+  pin = PiPiper::Pin.new(:pin => 17, :direction => :out)
+  pin.off
+  pin.on
+  sleep 15 # seconds
+  pin.off
+end
+
+fetch_ratings_from_zendesk(todays_date_to_integer)
+write_to_log_file
+manage_light_on_rasp_pi
