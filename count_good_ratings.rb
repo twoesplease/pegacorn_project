@@ -9,69 +9,71 @@ require 'date'
 require 'pi_piper'
 # Have to hardcode this file path bc cron can't see the relative path
 require '/Users/tyoung/workspace/Pegacorn_Project/.gitignore/pegacorn_secrets.rb'
-require 'pry'
 
-def fetch_ratings_from_zendesk(start_time)
-  uri = URI(ZendeskSecrets::SATISFACTION_RATINGS_ENDPOINT)
-  params = {
-    'start_time' => start_time,
-    'score' => 'good',
-    'sort_by' => 'created_at',
-    'sort_order' => 'asc',
-    'limit' => 1 # change this count if you need to inspect the body
-  }
+class GoodRatingsCount
+  attr_accessor :http_response, :parsed_body
 
-  uri.query = URI.encode_www_form(params)
+  START_COUNT_AT_5AM_EST = 32_400
+  TODAY_AT_5AM_IN_SECONDS = DateTime.now.to_date.strftime('%s').to_i + START_COUNT_AT_5AM_EST
+  API_CALL_PARAMS = {
+      'start_time' => TODAY_AT_5AM_IN_SECONDS,
+      'score' => 'good',
+      'sort_by' => 'created_at',
+      'sort_order' => 'asc',
+      'limit' => 1 # change this count if you need to inspect the body
+    } 
 
-  req = Net::HTTP::Get.new(uri)
-  req.basic_auth ZendeskSecrets::ZENDESK_USERNAME, ZendeskSecrets::ZENDESK_PASSWORD
+  def fetch_ratings_from_zendesk
+    uri = URI(ZendeskSecrets::SATISFACTION_RATINGS_ENDPOINT)
+    uri.query = URI.encode_www_form(API_CALL_PARAMS)
 
-  @res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) do |http|
-    http.request(req)
+    req = Net::HTTP::Get.new(uri)
+    req.basic_auth ZendeskSecrets::ZENDESK_USERNAME, ZendeskSecrets::ZENDESK_PASSWORD
+
+    res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) do |http|
+      http.request(req)
+    end
+    @http_response = res
+  end
+
+  def write_to_log_file
+    puts "\nI'm checking the count of good ratings."
+    puts "It's currently: #{DateTime.now}"
+    puts "Response code: #{@http_response.code}"
+    puts "Response message: #{@http_response.message} \n"
+
+    @parsed_body = JSON.parse(@http_response.body)
+    puts "Number of satisfaction ratings: #{@parsed_body['satisfaction_ratings'].count}"
+  end
+
+  def manage_light_on_rasp_pi
+    if satisfaction_goal_reached? 
+      light_the_pegacorn
+    else
+      puts "The time has not yet come.\n"
+    end
+  end
+
+  private
+  def satisfaction_goal_reached?
+    if @parsed_body['satisfaction_ratings'].count >= 300
+      return true
+    else
+      return false
+    end
+  end
+
+  def light_the_pegacorn
+    puts 'Light the pegacorn!'
+    pin = PiPiper::Pin.new(:pin => 17, :direction => :out)
+    pin.off
+    pin.on
+    sleep 15 # seconds
+    pin.off
   end
 end
 
-def write_to_log_file
-  puts "\nI'm checking the count of good ratings."
-  puts "It's currently: #{DateTime.now}"
-  puts "Response code: #{@res.code}"
-  puts "Response message: #{@res.message} \n"
-
-  @hashed_body = JSON.parse(@res.body)
-  puts "Number of satisfaction ratings: #{@hashed_body['satisfaction_ratings'].count}"
-end
-
-def manage_light_on_rasp_pi
-  if satisfaction_goal_reached? 
-    light_the_pegacorn
-  else
-    puts "The time has not yet come.\n"
-  end
-end
-
-START_COUNT_AT_5AM_EST = 32_400
-
-def todays_date_to_integer
-  today_at_5am_in_seconds = DateTime.now.to_date.strftime('%s').to_i + START_COUNT_AT_5AM_EST
-end
-
-def satisfaction_goal_reached?
-  if @hashed_body['satisfaction_ratings'].count >= 300
-    return true
-  else
-    return false
-  end
-end
-
-def light_the_pegacorn
-  puts 'Light the pegacorn!'
-  pin = PiPiper::Pin.new(:pin => 17, :direction => :out)
-  pin.off
-  pin.on
-  sleep 15 # seconds
-  pin.off
-end
-
-fetch_ratings_from_zendesk(todays_date_to_integer)
-write_to_log_file
-manage_light_on_rasp_pi
+newcount = GoodRatingsCount.new
+newcount.fetch_ratings_from_zendesk
+newcount.write_to_log_file
+newcount.manage_light_on_rasp_pi
