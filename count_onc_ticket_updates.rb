@@ -10,96 +10,109 @@ require 'pi_piper'
 require '/Users/tyoung/workspace/Pegacorn_Project/.gitignore/pegacorn_secrets.rb'
 
 class CountOncUpdates
-  attr_accessor :http_response, :response_body
+  ADD_ONE_FOR_TOMORROW = 1
+  SIX_AM_TIMESTAMP = "T06:00:00-04:00" 
 
-  # Get the year, month, date for today and then add the timestamp for 8pm
-  def today_at_8pm_iso 
-    @glommer = DateTime.parse(DateTime.now.strftime('%Y%m%d') + "T20:00:00-04:00").iso8601
+  def fetchsolved_writelog_managelight
+    http_response = fetch_solved_tickets_from_zendesk
+    write_to_log_file(http_response)
+    manage_light_on_rasp_pi(http_response)
   end
-
-  def tomorrow_at_6am_iso
-    today = DateTime.now.strftime('%Y-%m-%d').split("-").to_a
-    # Add 1 to today's date to make it tomorrow!
-    add_one_for_tomorrow = (today[2].to_i) + 1
-    # Swap out today's date in the array to get tomorrow
-    today.map do |x| 
-      if x==today[2] 
-        add_one_for_tomorrow
-      else 
-        x
-      end
-    end
-    tmw_at_6am = today.join("-") 	# Add the timestamp of 6am to the end of the array
-    tmw_at_6am = tmw_at_6am + "T06:00:00-04:00"
-    @blommer = DateTime.parse(tmw_at_6am).iso8601
-  end
-
-  API_CALL_PARAMS = { 
-      'sort_by' => 'created_at',
-      'sort_order' => 'asc',
-      'limit' => 1, # Change this to inspect the body
-      'query' => "solved>=#{@glommer} solved<=#{@blommer}"
-      }
-
-
+  
   def fetch_solved_tickets_from_zendesk
-    uri = URI(ZendeskSecrets::SEARCH_ENDPOINT)
-    uri.query = URI.encode_www_form(API_CALL_PARAMS)
-
-    req = Net::HTTP::Get.new(uri)
-    req.basic_auth ZendeskSecrets::ZENDESK_USERNAME, ZendeskSecrets::ZENDESK_PASSWORD
+    uri = compose_uri
+    req = compose_request(uri)
+    set_auth_creds(req)
       
-    res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) do 
-      |http| http.request(req)
+    res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) do |http| 
+      http.request(req)
     end
-    @http_response = res
-
-    # res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) {|http|
-      # http.request(req)
-    # }
+    res
   end
     
-  def write_to_log_file
+  def write_to_log_file(http_response)
     puts "I'm checking the number of ONC ticket updates."
     puts "It's currently: #{DateTime.now}"
-    puts "Response code: #{@http_response.code}"
-    puts "Response message: #{@http_response.message} \n"
-
-    hashed_body = JSON.parse(@htp_response.body)
-    @response_body = hashed_body
-    puts "Number of ONC ticket updates: #{@response_body['count']}"
+    puts "Response code: #{http_response.code}"
+    puts "Response message: #{http_response.message} \n"
+    puts "Number of ONC ticket updates: #{parsed_json_body(http_response)['count']}"
   end
 
-  def manage_light_on_rasp_pi
-    if ticket_count_goal_reached?
+  def manage_light_on_rasp_pi(http_response)
+    if ticket_count_goal_reached?(http_response)
       light_the_pegacorn
     else
       puts "The time has not yet come. \n"
     end
   end
 
-    private
-    def ticket_count_goal_reached?
-      if @response_body["count"] >= 45
-        return true
-      else
-        return false
-      end
-    end
+  private
+  def compose_uri
+    uri = URI(ZendeskSecrets::SEARCH_ENDPOINT)
+    uri.query = URI.encode_www_form(api_call_params)
+    uri
+  end
 
-    def light_the_pegacorn
-      puts "Light the pegacorn!"
-      pin = PiPiper::Pin.new( :pin => 17, :direction => :out )
-      pin.off
-      1.times do
-        pin.on
-        sleep 15 #seconds
-        pin.off
+  def compose_request(uri)
+    req = Net::HTTP::Get.new(uri)
+  end
+
+  def set_auth_creds(req)
+    req.basic_auth ZendeskSecrets::ZENDESK_USERNAME, ZendeskSecrets::ZENDESK_PASSWORD
+  end
+
+  def ticket_count_goal_reached?(http_response)
+    if parsed_json_body(http_response)["count"] >= 45
+      return true
+    end
+  end
+
+  def light_the_pegacorn
+    puts "Light the pegacorn!"
+    pin.off
+    pin.on
+    sleep 15 # seconds
+    pin.off
+  end
+
+  def api_call_params
+  { 
+    'sort_by' => 'created_at',
+    'sort_order' => 'asc',
+    'limit' => 1, # Change this to inspect the body
+    'query' => "solved>=#{today_at_8pm_iso} solved<=#{tomorrow_at_6am_iso}"
+  }
+  end
+
+  def pin
+    pin = PiPiper::Pin.new( :pin => 17, :direction => :out )
+  end
+
+  def parsed_json_body(http_response)
+    JSON.parse(http_response.body)
+  end
+  
+  # Get the year, month, date for today and then add the timestamp for 8pm
+  def today_at_8pm_iso 
+    DateTime.parse(DateTime.now.strftime('%Y%m%d') + "T20:00:00-04:00").iso8601
+  end
+
+  def tomorrow_at_6am_iso
+    today = DateTime.now.strftime('%Y-%m-%d').split("-").to_a
+    tomorrow = (today[2].to_i) + ADD_ONE_FOR_TOMORROW
+    replace_todays_date_with_tomorrow(today, tomorrow) 
+    tomorrow_at_6am = today.join("-") + SIX_AM_TIMESTAMP
+    DateTime.parse(tomorrow_at_6am).iso8601
+  end
+
+  def replace_todays_date_with_tomorrow(today, tomorrow)
+    today.map do |x| 
+      if x == today[2] 
+        tomorrow
       end
     end
+  end
 end
 
 new_updates_count = CountOncUpdates.new
-new_updates_count.fetch_solved_tickets_from_zendesk
-new_updates_count.write_to_log_file
-new_updates_count.manage_light_on_rasp_pi
+new_updates_count.fetchsolved_writelog_managelight
