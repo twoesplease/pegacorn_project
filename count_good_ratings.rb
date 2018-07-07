@@ -11,43 +11,35 @@ require 'pi_piper'
 require '/Users/tyoung/workspace/Pegacorn_Project/.gitignore/pegacorn_secrets.rb'
 
 class GoodRatingsCount
-  attr_accessor :http_response, :parsed_body
-
   START_COUNT_AT_5AM_EST = 32_400
-  TODAY_AT_5AM_IN_SECONDS = DateTime.now.to_date.strftime('%s').to_i + START_COUNT_AT_5AM_EST
-  API_CALL_PARAMS = {
-      'start_time' => TODAY_AT_5AM_IN_SECONDS,
-      'score' => 'good',
-      'sort_by' => 'created_at',
-      'sort_order' => 'asc',
-      'limit' => 1 # change this count if you need to inspect the body
-    } 
+
+  def fetchratings_writelog_managepi
+    http_response = fetch_ratings_from_zendesk
+    write_to_log_file(http_response)
+    manage_light_on_rasp_pi(http_response)
+  end
 
   def fetch_ratings_from_zendesk
-    uri = URI(ZendeskSecrets::SATISFACTION_RATINGS_ENDPOINT)
-    uri.query = URI.encode_www_form(API_CALL_PARAMS)
-
-    req = Net::HTTP::Get.new(uri)
-    req.basic_auth ZendeskSecrets::ZENDESK_USERNAME, ZendeskSecrets::ZENDESK_PASSWORD
+    uri = compose_uri
+    req = compose_request(uri)
+    set_auth_creds(req)
 
     res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => true) do |http|
       http.request(req)
     end
-    @http_response = res
+    res
   end
 
-  def write_to_log_file
+  def write_to_log_file(http_response)
     puts "\nI'm checking the count of good ratings."
     puts "It's currently: #{DateTime.now}"
-    puts "Response code: #{@http_response.code}"
-    puts "Response message: #{@http_response.message} \n"
-
-    @parsed_body = JSON.parse(@http_response.body)
-    puts "Number of satisfaction ratings: #{@parsed_body['satisfaction_ratings'].count}"
+    puts "Response code: #{http_response.code}"
+    puts "Response message: #{http_response.message} \n"
+    puts "Number of satisfaction ratings: #{json_response_body(http_response)['satisfaction_ratings'].count}"
   end
 
-  def manage_light_on_rasp_pi
-    if satisfaction_goal_reached? 
+  def manage_light_on_rasp_pi(http_response)
+    if satisfaction_goal_reached?(http_response) 
       light_the_pegacorn
     else
       puts "The time has not yet come.\n"
@@ -55,25 +47,56 @@ class GoodRatingsCount
   end
 
   private
-  def satisfaction_goal_reached?
-    if @parsed_body['satisfaction_ratings'].count >= 300
+  def compose_uri
+    uri = URI(ZendeskSecrets::SATISFACTION_RATINGS_ENDPOINT)
+    uri.query = URI.encode_www_form(api_call_params)
+    uri
+  end
+
+  def compose_request(uri)
+    Net::HTTP::Get.new(uri)
+  end
+
+  def set_auth_creds(req)
+    req.basic_auth ZendeskSecrets::ZENDESK_USERNAME, ZendeskSecrets::ZENDESK_PASSWORD
+  end
+
+  def satisfaction_goal_reached?(http_response)
+    if json_response_body(http_response)['satisfaction_ratings'].count >= 300
       return true
-    else
-      return false
     end
   end
 
   def light_the_pegacorn
     puts 'Light the pegacorn!'
-    pin = PiPiper::Pin.new(:pin => 17, :direction => :out)
     pin.off
     pin.on
     sleep 15 # seconds
     pin.off
   end
+
+   def api_call_params
+    {
+      'start_time' => today_at_5am_in_seconds,
+      'score' => 'good',
+      'sort_by' => 'created_at',
+      'sort_order' => 'asc',
+      'limit' => 1 # change this count if you need to inspect the body
+    } 
+  end
+
+   def today_at_5am_in_seconds
+    DateTime.now.to_date.strftime('%s').to_i + START_COUNT_AT_5AM_EST
+   end
+
+   def pin
+    PiPiper::Pin.new(:pin => 17, :direction => :out)
+   end
+
+   def json_response_body(http_response)
+    JSON.parse(http_response.body)
+   end
 end
 
-newcount = GoodRatingsCount.new
-newcount.fetch_ratings_from_zendesk
-newcount.write_to_log_file
-newcount.manage_light_on_rasp_pi
+new_good_ratings_count = GoodRatingsCount.new
+new_good_ratings_count.fetchratings_writelog_managepi
