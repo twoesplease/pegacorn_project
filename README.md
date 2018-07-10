@@ -29,9 +29,9 @@ In order to use Ruby code instead of Python code like the tutorial does, this co
 ## Use ##
 After enabling the code to use the correct authentication and access the correct endpoints, you can use the files in this project to achieve the following goals:
 
-**`count_good_ratings.rb`**: Checks the number of good satisfaction ratings for the day, starting the count at 5am EST.  Sends a signal to the Pi to trigger the light once that count hits 300 good ratings.
-**`count_onc_ticket_updates.rb`**: This file is designed to check stats for our overnight crew, so it looks at the number  of ticket updates for the day, starting at 8pm EST and ending at 6am EST.  Sends a signal to the Pi to trigger the light once that count hits 45 ticket updates.
-**`watch_chat_waits.rb`**: Uses websockets to check the current chat wait time on the Zendesk Real-Time Chat API.  Sends a signal to the Pi to trigger the light if that wait time is under 45 seconds.
+* `count_good_ratings.rb`**: Checks the number of good satisfaction ratings for the day, starting the count at 5am EST.  Sends a signal to the Pi to trigger the light once that count hits 300 good ratings.
+* `count_onc_ticket_updates.rb`**: This file is designed to check stats for our overnight crew, so it looks at the number  of ticket updates for the day, starting at 8pm EST and ending at 6am EST.  Sends a signal to the Pi to trigger the light once that count hits 45 ticket updates.
+* `watch_chat_waits.rb`**: Uses websockets to check the current chat wait time on the Zendesk Real-Time Chat API.  Sends a signal to the Pi to trigger the light if that wait time is under 45 seconds.
 
 ### Triggering Automatically ###
 In order to trigger these scripts automatically, you can leave your Pi connected to your light source and set up a cron job on the Pi to run each file automatically at chosen intervals throughout the day.
