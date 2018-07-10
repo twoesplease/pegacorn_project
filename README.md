@@ -1,6 +1,6 @@
 # Pegacorn Project #
 
-![Neon pegacorn sign](https://cl.ly/383O3M1I263e)
+![Neon pegacorn sign](https://d1nvcfeljt87mm.cloudfront.net/items/271C0r422B013L1z0T0P/Image%202018-07-09%20at%2010.01.59%20PM.png?X-CloudApp-Visitor-Id=d596462286e4c525c1c75b475db911c0&v=de49e146)
 
 ## Overview ##
 Each file in this project checks the Zendesk API to see if your Tech Support team has reached certain goals, and sends a signal to a connected Raspberry Pi when those goals are met.
