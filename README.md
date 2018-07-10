@@ -1,8 +1,6 @@
 # Pegacorn Project #
 
-![Neon pegacorn sign gif](https://creative.mailchimp.com/wp-content/uploads/2016/03/final_peg-1.gif)
-
-------------------------------------------------------------------
+![Neon pegacorn sign](https://creative.mailchimp.com/wp-content/uploads/2016/03/final_peg-1.gif)
 
 ## Overview ##
 Each file in this project checks the Zendesk API to see if your Tech Support team has reached certain goals, and sends a signal to a connected Raspberry Pi when those goals are met.
