@@ -1,6 +1,6 @@
 # Pegacorn Project #
 
-![Neon pegacorn sign](https://creative.mailchimp.com/wp-content/uploads/2016/03/final_peg-1.gif)
+![Neon pegacorn sign](https://cl.ly/383O3M1I263e)
 
 ## Overview ##
 Each file in this project checks the Zendesk API to see if your Tech Support team has reached certain goals, and sends a signal to a connected Raspberry Pi when those goals are met.
@@ -22,6 +22,7 @@ Endpoints in the Zendesk API change based on the subdomain for the account you'r
 
 In order to use this code with a Raspberry Pi, you'll also need one of those along with a bread board (or appropriate alternative) & the appropriate wiring to link to your light source of choice.
 These files use pin 17 as the output for the light source, so you'll need to be sure that your wiring connects your light source to that pin (or change the pin number in the `pin` function).  
+
 To delve more into using a Raspberry Pi to light things up, I recommend checking out [this tutorial](https://thepihut.com/blogs/raspberry-pi-tutorials/27968772-turning-on-an-led-with-your-raspberry-pis-gpio-pins).
 In order to use Ruby code instead of Python code like the tutorial does, this code uses the [Pi Piper gem](https://github.com/jwhitehorn/pi_piper).
 
