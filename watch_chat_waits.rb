@@ -5,9 +5,13 @@ require 'json'
 require 'pi_piper'
 require 'date'
 
-# class WatchChatWaits
+class WatchChatWaits
+  def start_event_machine
+    EM.start
+  end
+
   def create_new_request
-    Faye::WebSocket::Client.new(ZendeskSecrets::ZOPIM_STREAM_ENDPOINT,
+    Faye::WebSocket::Client.new("wss://rtm.zopim.com/stream",
     nil,
     :headers =>
     authorization_credentials)
@@ -47,64 +51,59 @@ require 'date'
     puts "\nPegacorn time has not yet come.\n"
   end
 
-  # ** REDO doesn't work in either of the methods below ** #
-
-  # def retry_3x(tries)
-    # tries -= 1
-    # sleep 15
-    # redo
-  # end
-
-  # def manage_wait_time
-  # wait_time_avg = ([h.dig('content', 'data', 'waiting_time_avg')][0]).to_i
-  # tries ||= 3
-    # if wait_time_avg.zero? && !(tries -= 1).zero?
-      # tries -= 1
-      # sleep 15
-      # redo
-      # # retry_3x
-    # elsif wait_time_avg > 0 && wait_time_avg < 45
-      # log_success_light_rasp_pi
-    # else
-      # log_attempt_unsuccessful
-    # end
-  # end
-
-
   EM.run do
     wss = create_new_request
     wss.on :open do
       subscribe_to_chat_waits(wss)
     end
 
-    wss.on :message do |event|
+    def check_for_success_3x_on_message
+      wss.on :message do |event|
       h = JSON.parse(event.data).to_hash
-      # manage_wait_time
-  wait_time_avg = ([h.dig('content', 'data', 'waiting_time_avg')][0]).to_i
-  tries ||= 3
-    if wait_time_avg.zero? && !(tries -= 1).zero?
-      tries -= 1
-      sleep 15
-      redo
-      # retry_3x
-    elsif wait_time_avg > 0 && wait_time_avg < 45
-      log_success_light_rasp_pi
-    else
-      log_attempt_unsuccessful
+      wait_time_avg = ([h.dig('content', 'data', 'waiting_time_avg')][0]).to_i
+      tries ||= 3
+      if wait_time_avg.zero? && !(tries -= 1).zero?
+        tries -= 1
+        sleep 15
+        redo
+      elsif wait_time_avg > 0 && wait_time_avg < 45
+        log_success_light_rasp_pi
+      else
+        log_attempt_unsuccessful
+      end
+        wss = true
+        stop_event_machine
+      end
     end
 
-      wss = true
-      EM.stop
-    end
-
-    wss.on :close do |event|
+    def log_status_on_close
+      wss.on :close do |event|
       puts "Something's gronked up." if event.code != 1006
       p ["Closing", "Event code: #{event.code}", "Event reason: #{event.reason}"]
-      EM.stop
+      end
+      stop_event_machine
     end
+
+  def stop_event_machine
+    EM.stop
   end
 
   def pin
     PiPiper::Pin.new( :pin => 17, :direction => :out )
   end
-# end
+
+  private
+
+end
+end
+
+new_wait_watch = WatchChatWaits.new
+EM.run do
+  new_wait_watch.start_event_machine
+  wss = new_wait_watch.create_new_request
+  wss.on :open do
+    new_wait_watch.subscribe_to_chat_waits(wss)
+    check_for_success_3x_on_message
+    log_status_on_close
+  end
+end

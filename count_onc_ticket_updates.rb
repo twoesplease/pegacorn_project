@@ -7,7 +7,7 @@ require 'json'
 require 'date'
 require 'pi_piper'
 # Have to hardcode this file path bc cron can't see the relative path
-require '/Users/tyoung/workspace/Pegacorn_Project/.gitignore/pegacorn_secrets.rb'
+require '/Users/tyoung/workspace/Pegacorn_Project/.gitignore/pegacorn_secrets.rb'j
 
 class CountOncUpdates
   ADD_ONE_FOR_TOMORROW = 1
@@ -49,6 +49,7 @@ class CountOncUpdates
   private
   def compose_uri
     uri = URI(ZendeskSecrets::SEARCH_ENDPOINT)
+    # Search endpoint format: "https://{subdomain}.zendesk.com/api/v2/search.json"
     uri.query = URI.encode_www_form(api_call_params)
     uri
   end

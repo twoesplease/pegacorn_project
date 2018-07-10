@@ -49,6 +49,7 @@ class GoodRatingsCount
   private
   def compose_uri
     uri = URI(ZendeskSecrets::SATISFACTION_RATINGS_ENDPOINT)
+    # Satisfaction ratings endpoint format: https://{subdomain}.zendesk.com/api/v2/satisfaction_ratings.json
     uri.query = URI.encode_www_form(api_call_params)
     uri
   end
