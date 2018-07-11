@@ -10,7 +10,9 @@ In this case, that Raspberry Pi is intended to be connected to a neon pegacorn s
 while `watch_chat_waits.rb` uses Zendesk's Real-Time-Chat API ([documentation here](https://developer.zendesk.com/rest_api/docs/chat/apis)).
 
 ## Requirements ##
-In order to use this project, you'll need a Zendesk account with access to their API. The login information has been obfuscated in the code you can see, so in order to use this code
+In order to use this project, you'll need Ruby installed on your machine.  The official Ruby website has a [downloads page](https://www.ruby-lang.org/en/downloads/) that can help you out with that.
+
+You'll also need a Zendesk account with access to their API. The login information has been obfuscated in the code you can see, so in order to use this code
 you'll need to create a file that stores your account-specific information and change the path to that file in the `require` statements (this is my recommendation since it's more secure), or you'll need to
 replace your account-specific information in the variables namespaced `ZendeskSecrets`.  
 
@@ -25,6 +27,9 @@ These files use pin 17 as the output for the light source, so you'll need to be 
 
 To delve more into using a Raspberry Pi to light things up, I recommend checking out [this tutorial](https://thepihut.com/blogs/raspberry-pi-tutorials/27968772-turning-on-an-led-with-your-raspberry-pis-gpio-pins).
 In order to use Ruby code instead of Python code like the tutorial does, this code uses the [Pi Piper gem](https://github.com/jwhitehorn/pi_piper).
+
+Finally, this app uses some dependencies which are outlined in its Gemfile.  You can use the [`bundler` gem]((https://bundler.io/) and its associated 
+[`bundle install`](https://bundler.io/v1.16/man/bundle-install.1.html) command to install the dependencies defined in the Gemfile.
 
 ## Use ##
 After enabling the code to use the correct authentication and access the correct endpoints, you can use the files in this project to achieve the following goals:
