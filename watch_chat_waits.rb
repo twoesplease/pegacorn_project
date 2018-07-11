@@ -6,10 +6,6 @@ require 'pi_piper'
 require 'date'
 
 class WatchChatWaits
-  def start_event_machine
-    EM.start
-  end
-
   def create_new_request
     Faye::WebSocket::Client.new("wss://rtm.zopim.com/stream",
     nil,
@@ -62,14 +58,14 @@ class WatchChatWaits
     # end
 
     def check_for_success_3x_on_message
-      wss.on :message do |event|
+      # wss.on :message do |event|
       h = JSON.parse(event.data).to_hash
       wait_time_avg = ([h.dig('content', 'data', 'waiting_time_avg')][0]).to_i
       tries ||= 3
       if wait_time_avg.zero? && tries_remain? 
         tries -= 1
         sleep 15
-        redo
+        # redo
       elsif wait_time_avg > 0 && wait_time_avg < 45
         log_success_light_rasp_pi
       else
@@ -78,19 +74,19 @@ class WatchChatWaits
         wss = true
         stop_event_machine
       end
-    end
+    # end
 
     def log_status_on_close
-      wss.on :close do |event|
+      # wss.on :close do |event|
       puts "Something's gronked up." if event.code != 1006
       p ["Closing", "Event code: #{event.code}", "Event reason: #{event.reason}"]
       end
-      stop_event_machine
-    end
+      # stop_event_machine
+    # end
 
-  def stop_event_machine
-    EM.stop
-  end
+  # def stop_event_machine
+    # EM.stop
+  # end
 
   def pin
     PiPiper::Pin.new( :pin => 17, :direction => :out )
@@ -102,7 +98,6 @@ end
 
 new_wait_watch = WatchChatWaits.new
 EM.run do
-  new_wait_watch.start_event_machine
   wss = new_wait_watch.create_new_request
   wss.on :open do
     new_wait_watch.subscribe_to_chat_waits(wss)
@@ -110,7 +105,12 @@ EM.run do
     log_status_on_close
   end
 
-  new_wait_watch.check_for_success_3x_on_message
-  new_wait_watch.log_status_on_close
+  wss.on :message do |event|
+    new_wait_watch.check_for_success_3x_on_message
+  end
+
+  wss.on :close do |event|
+    new_wait_watch.log_status_on_close
+  end
   EM.stop
 end
