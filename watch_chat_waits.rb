@@ -51,18 +51,22 @@ class WatchChatWaits
     puts "\nPegacorn time has not yet come.\n"
   end
 
-  EM.run do
-    wss = create_new_request
-    wss.on :open do
-      subscribe_to_chat_waits(wss)
-    end
+   def tries_remain?
+     !(tries -= 1).zero?
+   end
+
+  # EM.run do
+    # wss = create_new_request
+    # wss.on :open do
+      # subscribe_to_chat_waits(wss)
+    # end
 
     def check_for_success_3x_on_message
       wss.on :message do |event|
       h = JSON.parse(event.data).to_hash
       wait_time_avg = ([h.dig('content', 'data', 'waiting_time_avg')][0]).to_i
       tries ||= 3
-      if wait_time_avg.zero? && !(tries -= 1).zero?
+      if wait_time_avg.zero? && tries_remain? 
         tries -= 1
         sleep 15
         redo
@@ -95,7 +99,6 @@ class WatchChatWaits
   private
 
 end
-end
 
 new_wait_watch = WatchChatWaits.new
 EM.run do
@@ -106,4 +109,8 @@ EM.run do
     check_for_success_3x_on_message
     log_status_on_close
   end
+
+  new_wait_watch.check_for_success_3x_on_message
+  new_wait_watch.log_status_on_close
+  EM.stop
 end
