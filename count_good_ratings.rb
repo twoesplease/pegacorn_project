@@ -82,7 +82,7 @@ class GoodRatingsCount
       'score' => 'good',
       'sort_by' => 'created_at',
       'sort_order' => 'asc',
-      'limit' => 1 # change this count if you need to inspect the body
+      'limit' => 1000 # change this count if you need to inspect the body
     } 
   end
 
